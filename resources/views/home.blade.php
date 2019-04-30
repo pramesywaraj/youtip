@@ -30,8 +30,9 @@
     
       <!--  -->
     <div class="container my-4">
+
         <br>
-        <a href="#" class="btn btn-primary">Log in</a>
+        <a href="{{ url('/login') }}" class="btn btn-primary">Log in</a>
         <a href="{{ url('/register') }}" class="btn btn-primary">Sign Up</a>
     </div>
 
