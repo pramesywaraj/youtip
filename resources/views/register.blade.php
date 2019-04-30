@@ -49,13 +49,12 @@
             <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
         </div>
 
+        <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
 </div>
 
     <!-- button -->
-        <a href="{{ url('/') }}">
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-        </a>
+        
 
     <script src="{{ url('js/popper.min.js') }}"></script>
     <script src="{{ url('js/bootstrap.min.js') }}"></script>
