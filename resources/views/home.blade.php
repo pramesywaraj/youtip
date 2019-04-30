@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>YouTip!</title>
-    <base href="{{ URL::asset('/') }}" target="_blank">
+    <base href="{{ url('/') }}" target="_blank">
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
@@ -30,10 +30,31 @@
     
       <!--  -->
     <div class="container my-4">
+                        <!-- Authentication Links -->
+                        @guest
+                                <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Log in') }}</a>
+                            @if (Route::has('register'))
+                                    <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+                            @endif
+                        @else
+                            
+                                <a id="navbarDropdown"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                <br>
 
-        <br>
-        <a href="{{ url('/login') }}" class="btn btn-primary">Log in</a>
-        <a href="{{ url('/register') }}" class="btn btn-primary">Sign Up</a>
+                                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                             
+                           
+                        @endguest
     </div>
 
     <!-- Footer -->

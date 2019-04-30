@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
-Route::get('register', 'HomeController@register');
-Route::get('login', 'HomeController@login');
+
+Auth::routes();
+Route::get('/', function () {
+    return view('home');
+});Route::get('/oke', function () {
+    return view('oke');
+});

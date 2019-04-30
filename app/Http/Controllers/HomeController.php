@@ -6,20 +6,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // Homepage
+    
+     /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function home()
     {
         return view('home');
     }
 
-    // Register
-    public function register()
-    {
-        return view('register');
-    }
-
-    public function login()
-    {
-        return view('login');
-    }
 }
