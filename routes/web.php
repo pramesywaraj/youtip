@@ -11,8 +11,16 @@
 |
 */
 
+
+Auth::routes();
 Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes();
+Route::get('/oke', function () {
+    return view('oke');
+});
+
+Route::get('/profile','ProfileController@show')->name('profile');
+Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
+
