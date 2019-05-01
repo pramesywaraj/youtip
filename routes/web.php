@@ -24,3 +24,4 @@ Route::get('/oke', function () {
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
 
+Route::post('/product', 'ProductController@store')->name('store.product');
