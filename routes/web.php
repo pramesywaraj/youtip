@@ -18,3 +18,7 @@ Route::get('/', function () {
 });Route::get('/oke', function () {
     return view('oke');
 });
+
+Route::get('/profile','ProfileController@show')->name('profile');
+Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
+
