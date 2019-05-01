@@ -7,36 +7,60 @@
                     <tr>{{$users->alamat}}</tr>
 </table>
 
-<div class="form" action="{{route('profile.update')}}" method="post" >
-					{{ csrf_field() }}
-					{{ method_field('PATCH') }}
-                    <div class="form-group">
-                          <div class="col-xs-12">
-                              <label for="name"><h4> Nama</h4></label>
-                              <input type="text" class="form-control" value="{{$users->name}}" name="name" id="name" placeholder="name" title="enter your first name if any.">
-                          </div>
-                      </div>
-                     <br>
-                      <div class="form-group">
-                          <div class="col-xs-12">
-                             <label for="no_telp"><h4>Mobile</h4></label>
-                              <input type="text" class="form-control" value="{{$users->no_hp}}" name="no_telp" id="no_telp" placeholder="enter mobile number" title="enter your mobile number if any.">
-                          </div>
-                      </div>
-					  <br>
-                      <div class="form-group">
-                          <div class="col-xs-12">
-                              <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" value="{{$users->email}}" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                          </div>
-                      </div>
-                      <br>
-                      <div class="form-group">
-                          <div class="col-xs-12">
-                              <label for="alamat"><h4>Alamat</h4></label>
-                              <input type="text" class="form-control" value="{{$users->alamat}}" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                          </div>
-                      </div>
+<form method="POST" action="{{ route('profile.update') }}">
+					@csrf
+                    <input name="_method" type="hidden" value="PATCH">
+                    <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$users->name}}" required autocomplete="name" autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{$users->username}}" required autocomplete="username" autofocus>
+
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('No Hp') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="no_hp" type="text" class="form-control @error('no_hp') is-invalid @enderror" name="no_hp" value="{{ $users->no_hp }}" required autocomplete="no_hp" autofocus>
+
+                                @error('no_hp')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $users->email }}" required autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Alamat') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="alamat" type="alamat" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $users->alamat}}" required autocomplete="new-password">
+                            </div>
+                        </div>
                      
                       <div class="form-group">
                            <div class="col-xs-12">
@@ -45,8 +69,4 @@
                                	
                             </div>
                       </div>
-              	</form>
-				  
-
-
-</div>
+</form>
