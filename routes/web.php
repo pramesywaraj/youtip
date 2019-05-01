@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
-Route::get('register', 'HomeController@register');
-Route::get('login', 'HomeController@login');
+Route::get('/', function () {
+    return view('home');
+});
+
+Auth::routes();
