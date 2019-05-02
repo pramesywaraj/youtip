@@ -30,15 +30,15 @@ class ProductController extends Controller
 
         $tambah->image = $fileName;
         $tambah->save();
-        return redirect()->to('/'); 
+        return redirect()->to('/oke'); 
     }
     public function update(Request $request, $id)
     {
         //
-        $data= App\Product::find($id);
+        $data= \App\Product::find($id);
         $data->name = $request->get('name');
         $data->price = $request->get('price');
-        $data->deskripsi = $request->get('deskriipsi');
+        $data->deskripsi = $request->get('deskripsi');
         if($request->file('image') == "")
         {
             $data->image = $data->image;
@@ -57,11 +57,18 @@ class ProductController extends Controller
 
     }
 
+    public function showid(Request $datas, $id)
+    {   
+        $datas = \App\Product::where('id',$id)->first();
+        return view('oke2', compact('datas'));
+        
+    }
+
     public function show()
     {   
         
         $tampils = \App\Product::all();
-        return view('oke2', compact('tampils'));
+        return view('oke', compact('tampils'));
         
     }
 
