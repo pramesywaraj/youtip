@@ -80,7 +80,7 @@
                         </td>
                         <td>
                             
-							<form action="{{ route('show.update', $tampil->id)}}">
+							<form action="{{ route('show.update', $tampil->id) }}">
                                 @csrf
                                 <button class="btn btn-sm btn-danger" type="submit">Edit</button>
                             </form>
@@ -88,9 +88,10 @@
                         </td>
 						<td>
                             
-							<form action="#" method="DELETE">
+							<form action="{{ route('delete.product', $tampil->id) }}" method="post">
                                 @csrf
-                                {{ method_field('DELETE') }}
+                                @method('DELETE')
+                                <input name="_method" type="hidden" value="DELETE">
                                 <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
                             </form>
                             

@@ -28,4 +28,5 @@ Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
 Route::post('/product', 'ProductController@store')->name('store.product');
 Route::get('/oke2/{id}/update', 'ProductController@showid')->name('show.update');
 Route::PATCH('/oke2/{id}/update', 'ProductController@update')->name('update.product');
+Route::delete('/oke/{id}/destroy', 'ProductController@destroy')->name('delete.product');
 Route::get('/oke', 'ProductController@show')->name('show.product');

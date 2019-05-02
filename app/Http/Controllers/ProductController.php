@@ -77,7 +77,7 @@ class ProductController extends Controller
         //
         $hapus = \App\Product::find($id);
         $hapus->delete();
-        return redirect('/')->with('success','Data buku telah di hapus');
+        return redirect('/oke')->with('success','Data buku telah di hapus');
 
     }
 }
