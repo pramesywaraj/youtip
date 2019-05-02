@@ -5,6 +5,7 @@
                     <tr>{{$users->email}}</tr>
                     <tr>{{$users->no_hp}}</tr>
                     <tr>{{$users->alamat}}</tr>
+                
 </table>
 
 <form method="POST" action="{{ route('profile.update') }}">
