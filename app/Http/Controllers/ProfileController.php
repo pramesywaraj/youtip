@@ -27,6 +27,13 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
+    public function show1()
+    {   
+        $user = Auth::user();
+        //dd($users);
+        return view('profile', compact('user'));    
+    }
+
     public function update(Request $request)
     {
         $data = Auth::user();
@@ -38,4 +45,6 @@ class ProfileController extends Controller
         $data->save();
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
     }
+
+ 
 }

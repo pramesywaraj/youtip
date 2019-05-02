@@ -1,12 +1,6 @@
-<table>
-                   
-				   <tr>{{$users->name}}</tr>
-                   <tr>{{$users->username}}</tr>
-                    <tr>{{$users->email}}</tr>
-                    <tr>{{$users->no_hp}}</tr>
-                    <tr>{{$users->alamat}}</tr>
-                
-</table>
+@extends('layouts.app')
+
+@section('content')
 
 <form method="POST" action="{{ route('profile.update') }}">
 					@csrf
@@ -71,3 +65,4 @@
                             </div>
                       </div>
 </form>
+@endsection
