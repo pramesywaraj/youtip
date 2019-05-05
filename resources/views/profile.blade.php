@@ -2,12 +2,17 @@
 
 @section('content')
 
-<form method="POST" action="{{ route('profile.update') }}">
+<form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
 					@csrf
                     <input name="_method" type="hidden" value="PATCH">
+                    <img src="{{ asset('image/profile/'.$data->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="file" id="inputgambar" name="image" class="validate"/ >
+                        </div>
+                     </div>
                     <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$users->name}}" required autocomplete="name" autofocus>
                             </div>
@@ -53,10 +58,10 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Alamat') }}</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="alamat" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $users->alamat}}" required autocomplete="new-password">
+                                <input id="alamat" type="alamat" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $users->alamat}}">
                             </div>
                         </div>
-                     
+                        
                       <div class="form-group">
                            <div class="col-xs-12">
                                 <br>

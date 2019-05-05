@@ -42,7 +42,20 @@ class ProfileController extends Controller
         $data->no_hp = $request->get('no_hp');
         $data->email = $request->get('email');
         $data->alamat = $request->get('alamat');
-        $data->save();
+
+        if($request->file('image') == "")
+        {
+            $data->image = $data->image;
+        } 
+        else
+        {
+            $file       = $request->file('image');
+            $fileName   = $file->getClientOriginalName();
+            $request->file('image')->move("image/profile/", $fileName);
+            $data->image = $fileName;
+        }
+
+        $data->update();
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
     }
 
