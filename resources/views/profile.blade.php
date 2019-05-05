@@ -5,12 +5,12 @@
 <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
 					@csrf
                     <input name="_method" type="hidden" value="PATCH">
-                    <img src="{{ asset('image/profile/'.$data->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
                     <div class="row">
                         <div class="input-field col s6">
                             <input type="file" id="inputgambar" name="image" class="validate"/ >
                         </div>
                      </div>
+                     <img src="{{ asset('image/profile/'.$users->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
                     <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
                             <div class="col-md-6">
