@@ -20,23 +20,31 @@ class ProfileController extends Controller
     	return view('profile');
     }
 
-    public function show(Request $users)
+    public function show()
     {   
         $users = Auth::user();
         //dd($users);
         return view('profile', compact('users'));    
     }
 
+    public function show1()
+    {   
+        $user = Auth::user();
+        //dd($users);
+        return view('profile', compact('user'));    
+    }
+
     public function update(Request $request)
     {
         $data = Auth::user();
-        $data->update([
-            'name' => request('name'),
-            'no_telp' => request('no_telp'),
-            'email' => request('email'),
-            'alamat' => request('alamat'),
-            'status' => request('status')
-        ]);
+        $data->name = $request->get('name');
+        $data->username = $request->get('username');
+        $data->no_hp = $request->get('no_hp');
+        $data->email = $request->get('email');
+        $data->alamat = $request->get('alamat');
+        $data->save();
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
     }
+
+ 
 }
