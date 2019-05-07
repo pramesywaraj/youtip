@@ -27,6 +27,13 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
+    public function show3()
+    {   
+        $pengguna = Auth::user();
+        //dd($users);
+        return view('profile1', compact('pengguna'));    
+    }
+
 
     public function update(Request $request)
     {
@@ -53,11 +60,11 @@ class ProfileController extends Controller
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
     }
 
-    public function showid(Request $datas, $id)
-    {   
-        $produk = \App\Product::where('id',$id)->first();
-        return view('oke2', compact('produk'));
-        
+    public function show2(Request $id)
+    {  
+        $akun = Auth::user();
+        $data = \App\Product::where('id',$akun['user_id'])->first();
+        return view('profile1', compact('data'));
     }
 
  

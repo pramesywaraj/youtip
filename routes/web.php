@@ -29,15 +29,14 @@ Route::get('/produk', function () {
     return view('grid');
 });
 
+Route::get('/profil', function () {
+    return view('profile1');
+});
 
-Route::get('/profile1','ProfileController@show1')->name('profile1');
+Route::get('/profil','ProfileController@show3')->name('profil');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
-Route::get('/profile1','ProfileController@showid')->name('profile.produk');
-//Route::get('/profile1/{id}/show', 'ProductController@showid')->name('show.profile');
-//Route::get('/coba/{id}/update', 'ProfileController@showid')->name('show.profile');
-//Route::get('/coba/{id}/update', 'ProfileController@update')->name('update.profile');
-//Route::delete('/profile1/{id}/destroy', 'ProductController@destroy')->name('delete.productprof');
+
 
 Route::post('/product', 'ProductController@store')->name('store.product');
 Route::get('/oke2/{id}/update', 'ProductController@showid')->name('show.update');
