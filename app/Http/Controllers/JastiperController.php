@@ -27,7 +27,7 @@ class JastiperController extends Controller
     public function storeEvent(Request $request){
 
         $data = Auth::user();
-        $cari = \App\jastiper::where($cari->user_id = $data['id']);
+        $cari = \App\jastiper::where('user_id', $data['id'])->first();
         $tambah = new Event();
         $tambah->jastiper_id = $cari['id'];
         $tambah->name = $request['name'];
