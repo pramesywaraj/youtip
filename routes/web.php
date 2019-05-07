@@ -22,6 +22,9 @@ Route::get('/oke2', function () {
     return view('oke2');
 });
 
+Route::get('/jastiper', function () {
+    return view('jastiper');
+});
 
 Route::get('/profile1','ProfileController@show1')->name('profile1');
 Route::get('/profile','ProfileController@show')->name('profile');
@@ -37,3 +40,6 @@ Route::get('/oke2/{id}/update', 'ProductController@showid')->name('show.update')
 Route::PATCH('/oke2/{id}/update', 'ProductController@update')->name('update.product');
 Route::delete('/oke/{id}/destroy', 'ProductController@destroy')->name('delete.product');
 Route::get('/oke', 'ProductController@show')->name('show.product');
+
+Route::post('/profile', 'JastiperController@store')->name('jastiper.store');
+Route::post('/jastiper', 'JastiperController@storeEvent')->name('event.store');

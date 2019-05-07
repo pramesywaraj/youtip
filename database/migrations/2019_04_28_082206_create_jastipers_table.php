@@ -15,8 +15,10 @@ class CreateJastipersTable extends Migration
     {
         Schema::create('jastipers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('no_rekening')->unique();
+            $table->unsignedBigInteger('user_id')->unsigned();
             $table->timestamps();
+            $table->date('periode')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class jastiper extends Model
 {
-    //
+    protected $fillable = ['periode'];
+
 }

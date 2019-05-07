@@ -70,4 +70,17 @@
                             </div>
                       </div>
 </form>
+<br>
+
+<p>ingin menjadi JASTIPER?</p>
+<form method="POST" action="{{ route('jastiper.store') }}">
+    @csrf
+<div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('YA') }}
+                                </button>
+                            </div>
+                        </div>
+</form>
 @endsection
