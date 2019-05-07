@@ -22,16 +22,13 @@ Route::get('/oke2', function () {
     return view('oke2');
 });
 
-<<<<<<< HEAD
 Route::get('/jastiper', function () {
     return view('jastiper');
 });
-=======
 Route::get('/produk', function () {
     return view('grid');
 });
 
->>>>>>> d14e8ef43fa0c0de77a6a39195ac371494f0ff3f
 
 Route::get('/profile1','ProfileController@show1')->name('profile1');
 Route::get('/profile','ProfileController@show')->name('profile');
@@ -48,3 +45,5 @@ Route::PATCH('/oke2/{id}/update', 'ProductController@update')->name('update.prod
 Route::delete('/oke/{id}/destroy', 'ProductController@destroy')->name('delete.product');
 Route::get('/oke', 'ProductController@show')->name('show.product');
 
+Route::post('/profile', 'JastiperController@store')->name('jastiper.store');
+Route::post('/jastiper', 'JastiperController@storeEvent')->name('event.store');
