@@ -27,12 +27,6 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
-    public function show1()
-    {   
-        $user = Auth::user();
-        //dd($users);
-        return view('profile', compact('user'));    
-    }
 
     public function update(Request $request)
     {
@@ -57,6 +51,13 @@ class ProfileController extends Controller
 
         $data->update();
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
+    }
+
+    public function showid(Request $datas, $id)
+    {   
+        $produk = \App\Product::where('id',$id)->first();
+        return view('oke2', compact('produk'));
+        
     }
 
  
