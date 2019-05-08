@@ -44,5 +44,5 @@ Route::PATCH('/oke2/{id}/update', 'ProductController@update')->name('update.prod
 Route::delete('/oke/{id}/destroy', 'ProductController@destroy')->name('delete.product');
 Route::get('/oke', 'ProductController@show')->name('show.product');
 
-Route::post('/profile', 'JastiperController@store')->name('jastiper.store');
+//Route::post('/profile', 'JastiperController@store')->name('jastiper.store');
 Route::post('/jastiper', 'JastiperController@storeEvent')->name('event.store');
