@@ -53,6 +53,14 @@
                                                 <p>{{$pengguna->no_hp}}</p>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Alamat</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{$pengguna->alamat}}</p>
+                                            </div>
+                                        </div>
                                         
                                     
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -64,7 +72,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" href="{{ route('profile') }}"class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <input type="submit" href="{{ route('profile') }}" class="profile-edit-btn" name="btnAddMore" />
                     </div>
                 </div>
                 <div class="row">

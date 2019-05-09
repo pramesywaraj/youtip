@@ -25,9 +25,7 @@ Route::get('/oke2', function () {
 Route::get('/jastiper', function () {
     return view('jastiper');
 });
-Route::get('/produk', function () {
-    return view('grid');
-});
+
 
 Route::get('/profil', function () {
     return view('profile1');
