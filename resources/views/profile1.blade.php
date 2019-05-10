@@ -10,7 +10,7 @@
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img src="{{ asset('image/profile/'.$pengguna->image)  }}" alt=""/>
-                           
+
                         </div>
                     </div>
                     <div class="col-md-6">

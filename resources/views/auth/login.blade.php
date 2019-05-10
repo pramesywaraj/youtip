@@ -43,7 +43,7 @@
 
     <header class="bg-primary text-white">
     <div class="container text-center">
-      <h1>Login dulu cuk!</h1>
+      <h1>Login dulu!</h1>
       <p class="lead">Let's do it!</p>
     </div>
     </header>
