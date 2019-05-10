@@ -15,8 +15,10 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('jastiper_id')->unsigned();
-            $table->foreign('jastiper_id')->references('id')->on('jastipers');
+            $table->unsignedBigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('event_id')->unsigned();
+            $table->foreign('event_id')->references('id')->on('events');
             $table->string('name', 100);
             $table->float('price');
             $table->string('image', 100);
