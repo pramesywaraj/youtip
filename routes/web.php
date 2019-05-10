@@ -55,3 +55,4 @@ Route::get('/coba', 'HomePageController@show')->name('show.user');
 
 Route::get('/event', 'EventController@show')->name('show.event');
 Route::get('/oke/{id}/tambah', 'EventController@showid')->name('tambah.product');
+
