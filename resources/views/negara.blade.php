@@ -7,7 +7,6 @@
 
     <title>YouTip!</title>
     
-    <base href="{{ url('/') }}" target="_blank">
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
@@ -38,12 +37,8 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
+                        <a class="nav-link js-scroll-trigger" href="#product">Product</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -79,7 +74,7 @@
     
     <!-- Header -->
 
-    <header class="bg-primary text-white">
+    <header class="bg-danger text-white">
         <div class="container text-center">
             <h1>Negara Apa gitu!</h1>
             <p class="lead">Let's do it!</p>
@@ -88,9 +83,9 @@
 
     <!-- Product section -->
 
-    <section id="seller">
+    <section id="product">
     <div class="container text-center">
-    <h2>Our Seller</h2>
+    <h2>Our Product</h2>
 
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -216,7 +211,6 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->

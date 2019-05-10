@@ -10,8 +10,6 @@
 
     <title>Login!</title>
 
-    <base href="{{ URL::asset('/') }}" target="_blank">
-    <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">  
     
     <!-- Custom styles for this template -->
@@ -41,9 +39,9 @@
     </nav>
     <!-- End Nav -->
 
-    <header class="bg-primary text-white">
+    <header class="pad bg-primary text-white">
     <div class="container text-center">
-      <h1>Login dulu!</h1>
+      <h1>Login dulu cuk!</h1>
       <p class="lead">Let's do it!</p>
     </div>
     </header>

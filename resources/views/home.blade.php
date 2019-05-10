@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>YouTip!</title>
     
-    <base href="{{ url('/') }}" target="_blank">
-    <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+
      <!-- Custom styles for this template -->
-      <link href="{{ url('css/scrolling-nav.css') }}" rel="stylesheet">
       <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
+      <link href="css/scrolling-nav.css" rel="stylesheet">
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-
-    <script src="{{ url('js/jquery-3.4.0.min.js') }}"></script>
 </head>
-
 
 <body id="page-top">
     <!-- Nav Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
              <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +77,7 @@
     </nav>  
     
       <!-- Header -->    
-    <header class="masthead">
+    <header>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -186,6 +185,7 @@
     <div class="container text-center">
     <h2>Our Seller</h2>
 
+  <div class="accordion" id="accordionExample">    
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
@@ -272,7 +272,29 @@
         </div>
       </div>
     </div>
-
+    <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          View More
+        </button>
+    </h2>
+    
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+          </div>
+          <div class="card-footer">
+                <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
     <!-- /.row -->

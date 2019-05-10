@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register!</title>
-    <base href="{{ URL::asset('/') }}" target="_blank">
+
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">  
     
@@ -36,7 +36,7 @@
     </nav>
     <!-- End Nav -->
 
-    <header class="bg-primary text-white">
+    <header class="pad bg-primary text-white">
     <div class="container text-center">
       <h1>Register</h1>
       <p class="lead">If you haven't an acoount! Let's do it!</p>
