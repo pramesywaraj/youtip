@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration
             $table->unsignedBigInteger('user_id')->unsigned();
             $table->text('deskripsi');
             $table->string('negara');
+            $table->string('image', 100);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

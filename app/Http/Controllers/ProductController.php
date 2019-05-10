@@ -8,6 +8,7 @@ use App\order;
 use App\Product;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Auth;
 
@@ -15,22 +16,25 @@ use Auth;
 
 class ProductController extends Controller
 {
-    public function store(Request $request){
+    public function store(Request $request, $id){
 
+        
         $data = Auth::user();
         $tambah = new Product();
         $tambah->user_id = $data['id'];
+        $tambah->event_id = $id;
         $tambah->name = $request['name'];
         $tambah->price = $request['price'];
         $tambah->deskripsi = $request['deskripsi'];
 
         $file       = $request->file('image');
         $fileName   = $file->getClientOriginalName();
-        $request->file('image')->move("image/", $fileName);
+        $request->file('image')->move("image/product/", $fileName);
 
         $tambah->image = $fileName;
         $tambah->save();
-        return redirect()->to('/oke'); 
+        return redirect()->to('/'); 
+        dd($request);
     }
     public function update(Request $request, $id)
     {
@@ -47,7 +51,7 @@ class ProductController extends Controller
         {
             $file       = $request->file('image');
             $fileName   = $file->getClientOriginalName();
-            $request->file('image')->move("image/", $fileName);
+            $request->file('image')->move("image/product/", $fileName);
             $data->image = $fileName;
         }
         
@@ -57,10 +61,10 @@ class ProductController extends Controller
 
     }
 
-    public function showid(Request $datas, $id)
+    public function showid(Request $id)
     {   
-        $datas = \App\Product::where('id',$id)->first();
-        return view('oke2', compact('datas'));
+        $tampils = DB::table('products')->where('event_id', $id)->get();
+        return view('oke', compact('tampils'));
         
     }
 

@@ -26,8 +26,14 @@ class JastiperController extends Controller
         $tambah->negara = $request['negara'];
         $tambah->deskripsi = $request['deskripsi'];
         $tambah->no_rekening = $request['no_rekening'];
+
+        $file       = $request->file('image');
+        $fileName   = $file->getClientOriginalName();
+        $request->file('image')->move("image/event/", $fileName);
+
+        $tambah->image = $fileName;
         $tambah->save();
-        return redirect()->to('\oke'); 
+        return redirect()->to('event'); 
     }
 
 }
