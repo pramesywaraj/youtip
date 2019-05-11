@@ -30,8 +30,8 @@ class ProfileController extends Controller
     public function show3()
     {   
         $pengguna = Auth::user();
-        //dd($users);
-        return view('profile1', compact('pengguna'));    
+        $event = \App\Event::where('user_id', $pengguna['id'])->first();
+        return view('profile1', compact('pengguna', 'event'));    
     }
 
 
@@ -60,12 +60,7 @@ class ProfileController extends Controller
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
     }
 
-    public function show2(Request $id)
-    {  
-        $akun = Auth::user();
-        $event = \App\Event::where('user_id', $akun['id'])->get();
-        return view('profil', compact('event')); 
-    }
+    
 
  
 }
