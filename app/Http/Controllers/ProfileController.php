@@ -63,8 +63,8 @@ class ProfileController extends Controller
     public function show2(Request $id)
     {  
         $akun = Auth::user();
-        $data = \App\Product::where('id',$akun['user_id'])->first();
-        return view('profile1', compact('data'));
+        $event = \App\Event::where('user_id', $akun['id'])->get();
+        return view('profil', compact('event')); 
     }
 
  
