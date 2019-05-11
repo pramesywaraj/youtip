@@ -46,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">   
                 <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
+                        <a class="nav-link js-scroll-trigger" href="{{ url('/') }}">Home </a>
                     </li>
 
     

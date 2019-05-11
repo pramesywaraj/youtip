@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\jastiper;
 use App\keranjang;
 use App\order;
+use App\Event;
 use App\Product;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 
@@ -30,9 +32,9 @@ class ProfileController extends Controller
 
     public function show3()
     {   
-        $pengguna = Auth::user();
-        $events = \App\Event::where('user_id', $pengguna['id'])->first();
-        return view('profile1', compact('pengguna', 'events'));    
+        $pengguna = DB::table('users');
+        $events = DB::table('events')->where('user_id', $pengguna['id'])->get();
+        return view('profile1', compact('pengguna', 'events')); 
     }
 
 
