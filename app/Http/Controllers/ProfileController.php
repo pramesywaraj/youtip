@@ -27,11 +27,12 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
+
     public function show3()
     {   
         $pengguna = Auth::user();
-        $event = \App\Event::where('user_id', $pengguna['id'])->first();
-        return view('profile1', compact('pengguna', 'event'));    
+        $events = \App\Event::where('user_id', $pengguna['id'])->first();
+        return view('profile1', compact('pengguna', 'events'));    
     }
 
 
