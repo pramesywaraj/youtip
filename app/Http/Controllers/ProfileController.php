@@ -32,7 +32,7 @@ class ProfileController extends Controller
 
     public function show3()
     {   
-        $pengguna = DB::table('users');
+        $pengguna = Auth::user();
         $events = DB::table('events')->where('user_id', $pengguna['id'])->get();
         return view('profile1', compact('pengguna', 'events')); 
     }
