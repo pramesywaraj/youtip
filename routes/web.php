@@ -34,12 +34,6 @@ Route::get('/product', function () {
     return view('produk');
 });
 
-Route::get('/negara', function () {
-    return view('negara');
-});
-
-
-
 Route::get('/profil', function () {
     return view('profile1');
 });
