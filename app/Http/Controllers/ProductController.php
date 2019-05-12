@@ -84,4 +84,11 @@ class ProductController extends Controller
         return redirect('/oke')->with('success','Data buku telah di hapus');
 
     }
+    public function singleproduct($id)
+    {
+        //
+        $single = \App\Product::find($id);
+        return view('produk', compact('single'));
+
+    }
 }

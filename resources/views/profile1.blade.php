@@ -11,7 +11,71 @@
 <link rel="stylesheet" href="css/style.css">
 
 <!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>YouTip!</title>
+    
+    <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+
+     <!-- Custom styles for this template -->
+      <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
+      <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
+      <link href="css/scrolling-nav.css" rel="stylesheet">
+
+     <!-- Plugin CSS -->
+      <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  </head>
+	<body id="page-top">
+    <!-- Nav Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">   
+                <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{ url('/') }}">Home  <br> </a>
+                    </li>
+
+    
+            @guest                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Log in  </a>
+                    </li>
+                    <li class="nav-item">
+            @if (Route::has('register'))
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+            @endif
+            @else
+                    </li>
+                </ul>
+            </div>                    
+                        
+                            <br>
+
+                        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                        </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+                    </form>
+            @endguest
+        </div>
+    </nav> 
+  <body>
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
@@ -69,14 +133,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Product</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Your account</a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" href="{{ route('profile') }}" class="profile-edit-btn" name="btnAddMore" />
+                        <a href="{{ route('profile') }}" class="btn btn-primary">Edit Profile</a>
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -87,113 +150,20 @@
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row">
-
-    <section class="section-margin calc-60px">
-      <div class="container">
-        <div class="section-intro pb-60px">
-          <h2>Product</span></h2>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Beauty</p>
-                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Decor</p>
-                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Decor</p>
-                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div> 
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="image/product/kd.jpeg" alt="">
-              </div>
-              <div class="card-body">
-                <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            @foreach ($events as $event)
+                              <div class="col-lg-4 col-sm-6 portfolio-item">
+                                <div class="card h-100">
+                                  <a href="#"><img class="card-img-top" src="{{ asset('image/event/'.$event->image)  }}" alt=""></a>
+                                  <div class="card-body">
+                                    <h3 class="card-title">
+                                      <a href="{{ route('event.product', $event->id)}}">{{$event->name}}</a>
+                                    </h3>
+                                  <p class="card-text">{{$event->deskripsi}} <br>{{$event->negara}}</p>
+                                </div>
+                              </div>
+                            </div>
+                            @endforeach
+                           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         
                                 <div class="row">
                                     <div class="col-md-12">

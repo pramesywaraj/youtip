@@ -17,15 +17,10 @@ class HomePageController extends Controller
 {
     public function show()
     {   
-        $datas = DB::table('events')->select('user_id')->get();
-        $tampils = DB::table('users');
-        foreach($tampils as $tampil){
-            foreach($datas as $data){
-            if($tampils['id']==$data['user_id']){
-                return view('coba', compact('tampils'));
-                }
-            }
-        }
+        $data = DB::table('events');
+        $tampils = DB::table('users')->where('id',$data['user_id'])->first();
+        dd($tampils);
+        return view('coba', compact('tampils'));
     }
         
 }

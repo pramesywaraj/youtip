@@ -18,6 +18,7 @@
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
+      
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -46,7 +47,7 @@
                         <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
                     </li>
             @guest                  
                     <li class="nav-item">
@@ -55,16 +56,21 @@
                     <li class="nav-item">
             @if (Route::has('register'))
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-            @endif
-            @else
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-link btn-sm">
+                          <img class="img-top" src="/image/logo/cart.png">
+                              <span class="badge badge-light">3</span>
+                        </button> 
                     </li>
                 </ul>
+                  
+                @endif
+            @else
 
-                  <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-                  <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
             </div>                    
-                        <a id="navbarDropdown"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                        <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <br><span class="caret"></span>
                         </a>
                             <br>
 
@@ -94,61 +100,61 @@
                 </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active"><img src="/image/banner/thailnd.jpg">
+                <div class="carousel-item active"><img src="/image/banner/singapore1.jpg" alt="singapore">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                             <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/singapore.png" width="100px"></a>
-                            <h3>Singapore</h3>
+                            <h3 class="text-white">Singapore</h3>  
                         </div>
-                    </div>
+                      </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('/image/banner/thailnd.jpg')">
+                <div class="carousel-item"><img src="/image/banner/malaysia1.jpg" alt="malaysia">
                     <div class="carousel-caption d-none d-md-block">
                       <div class="item">
                             <a href="{{ route('login') }}"><img class="image-top shadow-sm" src="/image/Flag/malaysia.png" width="100px"></a>
-                            <h3>Malaysia</h3>
+                            <h3 class="text-white">Malaysia</h3>
                         </div>
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/china.png" alt="china">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                             <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/china.png" width="100px"></a>
-                            <h3>China</h3>
+                            <h3 class="text-white">China</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/japan.jpg" alt="japan">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                             <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/japan.png" width="100px"></a>
-                            <h3>Japan</h3>
+                            <h3 class="text-white">Japan</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/usa.png" alt="usa">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                             <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/united-states.png" width="100px"></a>
-                            <h3>USA</h3>
+                            <h3 class="text-white">USA</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/korea2.png" alt="korea">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                             <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/south-korea.png" width="100px"></a>
-                            <h3>Korea</h3>
+                            <h3 class="text-white">Korea</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/thailand.png" alt="thailand">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                             <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/thailand.png" width="100px"></a>
-                            <h3>Thailand</h3>
+                            <h3 class="text-white">Thailand</h3>
                         </div>
                     </div>
                 </div>
@@ -302,154 +308,7 @@
 </div>
 </section>
     <!-- /.row -->
-    <section class="section-margin calc-60px">
-      <div class="container">
-        <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Trending <span class="section-intro__style">Product</span></h2>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product1.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product2.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Beauty</p>
-                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product3.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Decor</p>
-                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product4.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Decor</p>
-                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product5.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product6.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product7.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div> 
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product8.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ================ trending product section end ================= -->  
-
+  
    <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">

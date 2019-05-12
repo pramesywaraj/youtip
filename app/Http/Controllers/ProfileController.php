@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\jastiper;
 use App\keranjang;
 use App\order;
+use App\Event;
 use App\Product;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 
@@ -27,11 +29,12 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
+
     public function show3()
     {   
         $pengguna = Auth::user();
-        //dd($users);
-        return view('profile1', compact('pengguna'));    
+        $events = DB::table('events')->where('user_id', $pengguna['id'])->get();
+        return view('profile1', compact('pengguna', 'events')); 
     }
 
 
@@ -60,12 +63,7 @@ class ProfileController extends Controller
         return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
     }
 
-    public function show2(Request $id)
-    {  
-        $akun = Auth::user();
-        $data = \App\Product::where('id',$akun['user_id'])->first();
-        return view('profile1', compact('data'));
-    }
+    
 
  
 }
