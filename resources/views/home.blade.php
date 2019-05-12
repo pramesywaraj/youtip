@@ -8,15 +8,17 @@
     
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
-    <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+     <!-- Google Fonts -->
+       <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+       <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 
      <!-- Custom styles for this template -->
       <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -27,7 +29,7 @@
     <!-- Nav Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
+             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}"><img class="img-top" src="/image/logo/you.png" width="100px"></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,10 +56,18 @@
                     <li class="nav-item">
             @if (Route::has('register'))
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-            @endif
-            @else
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-link btn-sm">
+                          <img class="img-top" src="/image/logo/cart.png">
+                              <span class="badge badge-light">3</span>
+                        </button> 
                     </li>
                 </ul>
+                  
+                @endif
+            @else
+
             </div>                    
                         <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <br><span class="caret"></span>
@@ -90,61 +100,61 @@
                 </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active"><img src="/image/banner/thailnd.jpg">
+                <div class="carousel-item active"><img src="/image/banner/singapore1.jpg" alt="singapore">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                         <a name="negara" href="{{ route('event.country', 'Singapore')}}"><img class="img-top" src="/image/Flag/singapore.png" width="100px"></a>
-                            <h3>Singapore</h3>
+                            <h3 class="text-white">Singapore</h3>
                         </div>
-                    </div>
+                      </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('/image/banner/thailnd.jpg')">
+                <div class="carousel-item"><img src="/image/banner/malaysia1.jpg" alt="malaysia">
                     <div class="carousel-caption d-none d-md-block">
                       <div class="item">
                             <a name="negara" href="{{ route('event.country', 'Malaysia')}}"><img class="image-top shadow-sm" src="/image/Flag/malaysia.png" width="100px"></a>
-                            <h3>Malaysia</h3>
+                            <h3 class="text-white">Malaysia</h3>
                         </div>
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/china.png" alt="china">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                         <a name="negara" href="{{ route('event.country', 'China')}}"><img class="img-top" src="/image/Flag/china.png" width="100px"></a>
-                            <h3>China</h3>
+                            <h3 class="text-white">China</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/japan.jpg" alt="japan">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                         <a name="negara" href="{{ route('event.country', 'Jepang')}}"><img class="img-top" src="/image/Flag/japan.png" width="100px"></a>
-                            <h3>Japan</h3>
+                            <h3 class="text-white">Japan</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/usa.png" alt="usa">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                         <a name="negara" href="{{ route('event.country', 'Amerika')}}"><img class="img-top" src="/image/Flag/united-states.png" width="100px"></a>
-                            <h3>USA</h3>
+                            <h3 class="text-white">USA</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/korea2.png" alt="korea">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                         <a name="negara" href="{{ route('event.country', 'Korea')}}"><img class="img-top" src="/image/Flag/south-korea.png" width="100px"></a>
-                            <h3>Korea</h3>
+                            <h3 class="text-white">Korea</h3>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item"><img src="/image/banner/thailand.png" alt="thailand">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
                         <a name="negara" href="{{ route('event.country', 'Thailand')}}"><img class="img-top" src="/image/Flag/thailand.png" width="100px"></a>
-                            <h3>Thailand</h3>
+                            <h3 class="text-white">Thailand</h3>
                         </div>
                     </div>
                 </div>
@@ -298,7 +308,7 @@
 </div>
 </section>
     <!-- /.row -->
-
+  
    <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">
@@ -342,7 +352,7 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
+    <script src="js/main.js"></script>
 
 </body>
 </html>
