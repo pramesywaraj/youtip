@@ -48,6 +48,7 @@ Route::get('/product2', function () {
 Route::get('/profil','ProfileController@show3')->name('profil');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
+Route::get('/product2/{id}','EventController@showproduct')->name('event.product');
 //Route::get('/profil/{id}/show','ProfileController@show2')->name('profil.produk');
 
 

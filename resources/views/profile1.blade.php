@@ -154,7 +154,7 @@
                                   <a href="#"><img class="card-img-top" src="{{ asset('image/event/'.$event->image)  }}" alt=""></a>
                                   <div class="card-body">
                                     <h3 class="card-title">
-                                      <a href="#">{{$event->name}}</a>
+                                      <a href="{{ route('event.product', $event->id)}}">{{$event->name}}</a>
                                     </h3>
                                   <p class="card-text">{{$event->deskripsi}} <br>{{$event->negara}}</p>
                                 </div>
