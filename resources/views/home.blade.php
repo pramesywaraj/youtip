@@ -103,8 +103,8 @@
                 <div class="carousel-item active"><img src="/image/banner/singapore1.jpg" alt="singapore">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/singapore.png" width="100px"></a>
-                            <h3 class="text-white">Singapore</h3>  
+                        <a name="negara" href="{{ route('event.country', 'Singapore')}}"><img class="img-top" src="/image/Flag/singapore.png" width="100px"></a>
+                            <h3 class="text-white">Singapore</h3>
                         </div>
                       </div>
                 </div>
@@ -112,7 +112,7 @@
                 <div class="carousel-item"><img src="/image/banner/malaysia1.jpg" alt="malaysia">
                     <div class="carousel-caption d-none d-md-block">
                       <div class="item">
-                            <a href="{{ route('login') }}"><img class="image-top shadow-sm" src="/image/Flag/malaysia.png" width="100px"></a>
+                            <a name="negara" href="{{ route('event.country', 'Malaysia')}}"><img class="image-top shadow-sm" src="/image/Flag/malaysia.png" width="100px"></a>
                             <h3 class="text-white">Malaysia</h3>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                 <div class="carousel-item"><img src="/image/banner/china.png" alt="china">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/china.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'China')}}"><img class="img-top" src="/image/Flag/china.png" width="100px"></a>
                             <h3 class="text-white">China</h3>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                 <div class="carousel-item"><img src="/image/banner/japan.jpg" alt="japan">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/japan.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Jepang')}}"><img class="img-top" src="/image/Flag/japan.png" width="100px"></a>
                             <h3 class="text-white">Japan</h3>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                 <div class="carousel-item"><img src="/image/banner/usa.png" alt="usa">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/united-states.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Amerika')}}"><img class="img-top" src="/image/Flag/united-states.png" width="100px"></a>
                             <h3 class="text-white">USA</h3>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                 <div class="carousel-item"><img src="/image/banner/korea2.png" alt="korea">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/south-korea.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Korea')}}"><img class="img-top" src="/image/Flag/south-korea.png" width="100px"></a>
                             <h3 class="text-white">Korea</h3>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                 <div class="carousel-item"><img src="/image/banner/thailand.png" alt="thailand">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/thailand.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Thailand')}}"><img class="img-top" src="/image/Flag/thailand.png" width="100px"></a>
                             <h3 class="text-white">Thailand</h3>
                         </div>
                     </div>

@@ -36,6 +36,8 @@ class EventController extends Controller
         return view('oke', compact('tampil'));
         
     }
+
+   
     public function showproduct(Request $request, $id)
     {   
         $show = DB::table('products')->where('event_id', $id)->get();

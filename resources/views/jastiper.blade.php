@@ -13,10 +13,17 @@
 
                         <div class="form-group row">
                             <label for="negara" class="col-md-4 col-form-label text-md-right">{{ __('Negara') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="negara" type="text" name="negara" value="{{ old('negara') }}">
-                            </div>
+                            <p><select name="negara">
+                            <option value="">Pilih Negara:</option>
+                            <option value="Korea">Korea</option>
+                            <option value="Jepang">Jepang</option>
+                            <option value="China">China</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Amerika">Amerika</option>
+                            </select>
+                            </p>
                         </div>
 
                         <div class="form-group row">

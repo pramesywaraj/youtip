@@ -22,7 +22,9 @@ Route::get('/oke2', function () {
     return view('oke2');
 });
 
-
+Route::get('/jastiper', function () {
+    return view('jastiper');
+});
 
 Route::get('/coba', function () {
     return view('coba');
@@ -31,6 +33,11 @@ Route::get('/coba', function () {
 Route::get('/product', function () {
     return view('produk');
 });
+
+Route::get('/negara', function () {
+    return view('negara');
+});
+
 
 
 Route::get('/profil', function () {
@@ -63,6 +70,7 @@ Route::get('/oke', 'ProductController@show')->name('show.product');
 Route::post('/jastiper', 'JastiperController@storeEvent')->name('event.store');
 
 Route::get('/coba', 'HomePageController@show')->name('show.user');
+Route::get('/negara/{id}', 'HomePageController@showevent')->name('event.country');
 
 Route::get('/event', 'EventController@show')->name('show.event');
 Route::get('/oke/{id}/tambah', 'EventController@showid')->name('tambah.product');

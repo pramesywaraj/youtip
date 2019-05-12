@@ -153,7 +153,7 @@
                             @foreach ($events as $event)
                               <div class="col-lg-4 col-sm-6 portfolio-item">
                                 <div class="card h-100">
-                                  <a href="#"><img class="card-img-top" src="{{ asset('image/event/'.$event->image)  }}" alt=""></a>
+                                  <a href="#"><img class="card-img-top" src="{{ asset('image/event/'.$event->image) }}" alt=""></a>
                                   <div class="card-body">
                                     <h3 class="card-title">
                                       <a href="{{ route('event.product', $event->id)}}">{{$event->name}}</a>
