@@ -86,8 +86,9 @@
     <section id="product">
     <div class="container text-center">
     <h2>Events</h2>
-    @foreach($show as $sh)
+    <div class="accordion" id="accordionExample">
     <div class="row">
+    @foreach($show as $sh)
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
           <a href="#"><img class="card-img-top" src="{{ asset('image/event/'.$sh->image) }}" alt=""></a>
@@ -102,9 +103,8 @@
           </div>
         </div>
       </div>
-    </div>
     @endforeach
-
+</div>
 </div>
 </section>
     <!-- /.row -->
