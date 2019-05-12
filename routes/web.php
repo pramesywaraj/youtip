@@ -41,6 +41,10 @@ Route::get('/product', function () {
     return view('produk');
 });
 
+Route::get('/product2', function () {
+    return view('produkuser');
+});
+
 Route::get('/profil','ProfileController@show3')->name('profil');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');

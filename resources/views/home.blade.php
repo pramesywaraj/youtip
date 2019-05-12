@@ -45,7 +45,7 @@
                         <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
                     </li>
             @guest                  
                     <li class="nav-item">
@@ -60,7 +60,7 @@
                 </ul>
             </div>                    
                         <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                        {{ Auth::user()->name }} <br><span class="caret"></span>
                         </a>
                             <br>
 

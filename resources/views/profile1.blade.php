@@ -9,7 +9,71 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>YouTip!</title>
+    
+    <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+
+     <!-- Custom styles for this template -->
+      <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
+      <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
+      <link href="css/scrolling-nav.css" rel="stylesheet">
+
+     <!-- Plugin CSS -->
+      <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  </head>
+	<body id="page-top">
+    <!-- Nav Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">   
+                <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{ url('/') }}">Home  <br> </a>
+                    </li>
+
+    
+            @guest                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Log in  </a>
+                    </li>
+                    <li class="nav-item">
+            @if (Route::has('register'))
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+            @endif
+            @else
+                    </li>
+                </ul>
+            </div>                    
+                        
+                            <br>
+
+                        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                        </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+                    </form>
+            @endguest
+        </div>
+    </nav> 
+  <body>
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
@@ -67,9 +131,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Product</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Your account</a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
