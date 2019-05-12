@@ -37,6 +37,14 @@ Route::get('/profil', function () {
     return view('profile1');
 });
 
+Route::get('/negara', function () {
+    return view('negara');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
 Route::get('/profil','ProfileController@show3')->name('profil');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');

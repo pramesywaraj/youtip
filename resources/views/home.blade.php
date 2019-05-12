@@ -8,15 +8,16 @@
     
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
-    <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+     <!-- Google Fonts -->
+       <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+       <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 
      <!-- Custom styles for this template -->
       <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -27,7 +28,7 @@
     <!-- Nav Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
+             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}"><img class="img-top" src="/image/logo/you.png" width="100px"></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -58,6 +59,9 @@
             @else
                     </li>
                 </ul>
+
+                  <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
+                  <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
             </div>                    
                         <a id="navbarDropdown"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>
@@ -298,6 +302,153 @@
 </div>
 </section>
     <!-- /.row -->
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <p>Popular Item in the market</p>
+          <h2>Trending <span class="section-intro__style">Product</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product1.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product2.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Beauty</p>
+                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product3.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product4.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product5.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product6.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product7.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product8.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ trending product section end ================= -->  
 
    <!-- Contact Section -->
   <section class="page-section" id="contact">
@@ -342,7 +493,7 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
+    <script src="js/main.js"></script>
 
 </body>
 </html>

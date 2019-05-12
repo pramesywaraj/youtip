@@ -8,6 +8,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
@@ -85,73 +87,112 @@
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project One</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <h2>Product</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Beauty</p>
+                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="image/product/kd.jpeg" alt="">
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Two</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Three</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Four</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Five</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Six</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         
                                 <div class="row">
