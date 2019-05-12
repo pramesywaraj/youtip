@@ -93,7 +93,7 @@
                 <div class="carousel-item active"><img src="/image/banner/thailnd.jpg">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/singapore.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Singapore')}}"><img class="img-top" src="/image/Flag/singapore.png" width="100px"></a>
                             <h3>Singapore</h3>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="carousel-item" style="background-image: url('/image/banner/thailnd.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                       <div class="item">
-                            <a href="{{ route('login') }}"><img class="image-top shadow-sm" src="/image/Flag/malaysia.png" width="100px"></a>
+                            <a name="negara" href="{{ route('event.country', 'Malaysia')}}"><img class="image-top shadow-sm" src="/image/Flag/malaysia.png" width="100px"></a>
                             <h3>Malaysia</h3>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                 <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/china.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'China')}}"><img class="img-top" src="/image/Flag/china.png" width="100px"></a>
                             <h3>China</h3>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                 <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/japan.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Jepang')}}"><img class="img-top" src="/image/Flag/japan.png" width="100px"></a>
                             <h3>Japan</h3>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                 <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/united-states.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Amerika')}}"><img class="img-top" src="/image/Flag/united-states.png" width="100px"></a>
                             <h3>USA</h3>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                 <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/south-korea.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Korea')}}"><img class="img-top" src="/image/Flag/south-korea.png" width="100px"></a>
                             <h3>Korea</h3>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                 <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="item">
-                            <a href="{{ route('login') }}"><img class="img-top" src="/image/Flag/thailand.png" width="100px"></a>
+                        <a name="negara" href="{{ route('event.country', 'Thailand')}}"><img class="img-top" src="/image/Flag/thailand.png" width="100px"></a>
                             <h3>Thailand</h3>
                         </div>
                     </div>

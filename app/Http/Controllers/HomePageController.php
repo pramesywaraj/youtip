@@ -22,5 +22,13 @@ class HomePageController extends Controller
         dd($tampils);
         return view('coba', compact('tampils'));
     }
+    
+    
+    public function showevent(Request $request, $id)
+    {   
+        $oke = $id;
+        $show = DB::table('events')->where('negara', $id)->get();
+        return view('negara', compact('show', 'oke'));
         
+    }
 }
