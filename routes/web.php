@@ -28,27 +28,16 @@ Route::get('/coba', function () {
     return view('coba');
 });
 
-Route::get('/jastiper', function () {
-    return view('jastiper');
-});
-
-
-Route::get('/profil', function () {
-    return view('profile1');
-});
-
 Route::get('/product', function () {
     return view('produk');
 });
 
-Route::get('/product2', function () {
-    return view('produkuser');
-});
 
 Route::get('/profil','ProfileController@show3')->name('profil');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/product2/{id}','EventController@showproduct')->name('event.product');
+Route::get('/product/{id}','ProductController@singleproduct')->name('single.product');
 //Route::get('/profil/{id}/show','ProfileController@show2')->name('profil.produk');
 
 

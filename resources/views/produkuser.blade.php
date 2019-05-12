@@ -69,10 +69,6 @@
   <body>
   <section id="seller">
   <div class="container text-center">
-  <div class="col-md-2">
-    <a href="#" class="btn btn-primary">Tambah Product</a>
-                        
-  </div>
   <h2>Product</h2>
   <div class="accordion" id="accordionExample">    
     <div class="row">
@@ -82,13 +78,12 @@
           <a href="#"><img class="card-img-top" src="{{ asset('image/product/'.$sh->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">{{$sh->name}}</a>
+              <a>{{$sh->name}}</a>
             </h4>
-            <p class="card-text">{{$sh->deskripsi}}</p>
             <p class="card-text">Rp. {{$sh->price}}</p>       
           </div>
           <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <a href="{{ route('single.product', $sh->id)}}" class="btn btn-primary">View Product</a>
           </div>
         </div>
       </div>
