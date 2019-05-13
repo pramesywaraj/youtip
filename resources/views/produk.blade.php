@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="css/bootstrap-produk.css"/>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
@@ -18,8 +14,6 @@
 
     <title>YouTip!</title>
     
-    <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
-
     <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -29,6 +23,8 @@
       <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/bootstrap-produk.css"/>
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -78,9 +74,18 @@
             @endguest
         </div>
     </nav> 
-  <body>
-  </head>
-	
+
+<!-- header -->
+
+    <header class="bg-light">
+        <div class="container text-center">
+          <h1>Enjoy your shopping!</h1>
+          <p class="lead"></p>
+        </div>
+    </header>
+
+    <!-- end header -->
+
 	<div class="container">
 		<div class="card">
 			<div class="container-fliud">
@@ -94,7 +99,7 @@
 					</div>
 					<div class="details col-md-6">
 						<h3 class="product-title">{{$single->name}}</h3>
-						<p class="product-description">{{$single->deskripsi}}</p>
+						  <p class="product-description">{{$single->deskripsi}}</p>
 						<h4 class="price">Harga: <span>Rp. {{$single->price}}</span></h4>
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button">BELI SEKARANG!</button>
@@ -104,5 +109,11 @@
 			</div>
 		</div>
 	</div>
+ 
+  <!-- Javascript -->
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
   </body>
 </html>

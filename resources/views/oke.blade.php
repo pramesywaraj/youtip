@@ -72,7 +72,7 @@
                     <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $tampil->name }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $tampil->name }}" required autocomplete="name" readonly>
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Deskripsi') }}</label>
 
                             <div class="col-md-6">
-                                <input id="deskripsi" type="text" class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" value="{{$tampil->deskripsi}}" required autocomplete="deskripsi" autofocus>
+                                <input id="deskripsi" type="text" class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" value="{{$tampil->deskripsi}}" required autocomplete="deskripsi" readonly>
                             </div>
                         </div>
 
@@ -88,7 +88,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Negara') }}</label>
 
                             <div class="col-md-6">
-                                <input id="negara" type="text" class="form-control @error('negara') is-invalid @enderror" name="negara" value="{{ $tampil->negara }}" required autocomplete="negara" autofocus>
+                                <input id="negara" type="text" class="form-control @error('negara') is-invalid @enderror" name="negara" value="{{ $tampil->negara }}" required autocomplete="negara" readonly>
                             </div>
 </form>
 <br>
