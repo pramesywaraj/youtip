@@ -18,6 +18,14 @@
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" href="img/Fevicon.png" type="image/png">
+      <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+	  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+	  <link rel="stylesheet" href="vendors/linericon/style.css">
+      <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+      <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+      <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+      <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -297,6 +305,12 @@
 
 
     <!-- Custom JavaScript for this theme -->
+    
+    <script src="vendors/skrollr.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/mail-script.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script src="js/main.js"></script>
 
