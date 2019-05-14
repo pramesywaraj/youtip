@@ -1,11 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Login!</title>
+<head>
 
      <!-- Google Fonts -->
        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
@@ -17,13 +12,15 @@
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
+      
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-  </head>
-  <body>
 
-    <!-- Nav -->
+</head>
+
+<body id="page-top">
+    <!-- Nav Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
              <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}"><img class="img-top" src="/image/logo/you.png" width="100px"></a>
@@ -34,22 +31,40 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">   
                 <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{{ url('/') }}">Home </a>
+                        <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
                     </li>
             @guest                  
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Log in  </a>
+                    </li>
+                    <li class="nav-item">
             @if (Route::has('register'))
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-            @endif
-            @else
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-link btn-sm">
+                          <img class="img-top" src="/image/logo/cart.png">
+                              <span class="badge badge-light">3</span>
+                        </button> 
                     </li>
                 </ul>
+                  
+                @endif
+            @else
+
             </div>                    
-                        <a id="navbarDropdown"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                        <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <br><span class="caret"></span>
                         </a>
                             <br>
 
@@ -63,86 +78,15 @@
                     </form>
             @endguest
         </div>
-    </nav> 
-    <!-- End Nav -->
+    </nav>  
 
-    <header class="pad bg-light">
-    <div class="container text-center">
-      <h1>Login!</h1>
-      <p class="lead">if you already have an account!</p>
-    </div>
-    </header>
+        <main>
+            @yield('content')
+        </main>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-    </div>
-</div>
-
- <!-- Contact Section -->
- <section class="page-section" id="contact">
+     
+   <!-- Contact Section -->
+  <section class="page-section" id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -165,7 +109,11 @@
     </div>
   </section>
 
-     <!-- Javascript -->
+
+
+
+    <!-- Javascript -->
+
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
@@ -179,7 +127,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
 
-    <!-- Custom JavaScript for theme -->
+    <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
     <script src="js/main.js"></script>
 
