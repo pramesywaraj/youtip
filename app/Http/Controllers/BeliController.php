@@ -36,7 +36,7 @@ class BeliController extends Controller
     public function showcart()
     {   
         $akun = Auth::user();
-        $show = DB::table('keranjang_items')->where('user_id', $akun['id'])->get();
+        $show = DB::table('keranjang_items')->where('pembeli_id', $akun['id'])->orderBy('jastiper_id')->get();
         return view('cart', compact('show'));
         
     }
