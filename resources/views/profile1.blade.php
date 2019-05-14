@@ -1,15 +1,3 @@
-<link rel="stylesheet" href="css/profile.css"/>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="css/grid.css"/>
-<script src="public/js/grid.js"></script>
-<!--<script src="{{asset('js/grid.js')}}"></script>-->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
-
 <!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +16,10 @@
       <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/profile.css"/>
+      <link rel="stylesheet" href="css/grid.css"/>
+      <link rel="stylesheet" href="css/style.css">
+
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -37,7 +29,7 @@
     <!-- Nav Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
+             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}"><img class="img-top" src="/image/logo/you.png" width="100px"></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -45,23 +37,41 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">   
                 <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{{ url('/') }}">Home  <br> </a>
+                        <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
                     </li>
 
-    
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
+                    </li>
             @guest                  
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Log in  </a>
+                        <a class="nav-link" href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Log in  </a>
                     </li>
                     <li class="nav-item">
             @if (Route::has('register'))
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-            @endif
-            @else
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-link btn-sm">
+                          <img class="img-top" src="/image/logo/cart.png">
+                              <span class="badge badge-light">3</span>
+                        </button> 
                     </li>
                 </ul>
+                  
+                @endif
+            @else
+
             </div>                    
-                        
+                        <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <br><span class="caret"></span>
+                        </a>
                             <br>
 
                         <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -74,8 +84,10 @@
                     </form>
             @endguest
         </div>
-    </nav> 
-  <body>
+    </nav>  
+
+                            <!-- end nav -->
+
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
@@ -131,7 +143,7 @@
                                     
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Product</a>
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Event</a>
                                 </li>
                                 
                             </ul>
@@ -139,7 +151,7 @@
                     </div>
                     <div class="col-md-2">
                         <a href="{{ route('profile') }}" class="btn btn-primary">Edit Profile</a>
-                        
+                        <a href="{{ route('show.event') }}" class="btn btn-primary my-2">Edit Event</a>                        
                     </div>
                 </div>
                 <div class="row">
@@ -177,3 +189,10 @@
                 </div>
             </form>           
         </div>
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="public/js/grid.js"></script>
+
+</body>
+</html>

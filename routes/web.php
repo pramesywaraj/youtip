@@ -46,6 +46,10 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
+Route::get('/main', function () {
+    return view('main');
+});
+
 Route::get('/profil','ProfileController@show3')->name('profil');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');

@@ -76,7 +76,6 @@
   </header>
 
 <div class="container my-4">
-<h2>Youtip! Register</h2>
     <div class="row justify-content-center">
         <div class="col-md-8">
                 
