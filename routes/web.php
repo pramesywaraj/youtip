@@ -69,3 +69,8 @@ Route::get('/negara/{id}', 'HomePageController@showevent')->name('event.country'
 Route::get('/event', 'EventController@show')->name('show.event');
 Route::get('/oke/{id}/tambah', 'EventController@showid')->name('tambah.product');
 
+Route::post('/cart/{id}', 'BeliController@tambahproduk')->name('tambah.cart');
+Route::get('/cart', 'BeliController@showcart')->name('tampil.cart');
+
+
+

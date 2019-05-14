@@ -101,6 +101,16 @@
 						<h3 class="product-title">{{$single->name}}</h3>
 						  <p class="product-description">{{$single->deskripsi}}</p>
 						<h4 class="price">Harga: <span>Rp. {{$single->price}}</span></h4>
+            <form action="{{ route('tambah.cart', $single->id)}}" method="POST">
+           @csrf
+<div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Ya!') }}
+                                </button>
+                            </div>
+                        </div>
+</form>
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button">BELI SEKARANG!</button>
 						</div>

@@ -34,7 +34,6 @@ class ProductController extends Controller
         $tambah->image = $fileName;
         $tambah->save();
         return redirect()->to('/'); 
-        dd($request);
     }
     public function update(Request $request, $id)
     {
