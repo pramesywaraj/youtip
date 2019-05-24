@@ -34,8 +34,7 @@ class ProfileController extends Controller
     public function showbyid($id)
     {   
         $pengguna = \App\User::find($id);
-        $events = DB::table('events')->where('user_id', $pengguna['id'])->get();
-        return view('profile1', compact('pengguna', 'events'));  
+        return view('profileinfo', compact('pengguna'));  
     }
 
     //fungsi menampilkan informasi akun dan event di profile pengguna

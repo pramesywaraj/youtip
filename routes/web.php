@@ -60,7 +60,7 @@ Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/product2/{id}','EventController@showproduct')->name('event.product');
 Route::get('/product/{id}','ProductController@singleproduct')->name('single.product');
 //Route::get('/profil/{id}/show','ProfileController@show2')->name('profil.produk');
-Route::get('/profile/{id}','ProfileController@showbyid')->name('profile.id');
+Route::get('/profileinfo/{id}','ProfileController@showbyid')->name('profile.id');
 
 
 //Routing semuamua tentang produk
