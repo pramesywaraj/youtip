@@ -77,6 +77,6 @@ Route::delete('/event/{id}/destroy', 'EventController@destroy')->name('delete.ev
 
 Route::post('/cart/{id}', 'BeliController@tambahproduk')->name('tambah.cart');
 Route::get('/cart', 'BeliController@showcart')->name('tampil.cart');
-
+Route::delete('/cart/{id}/delete', 'BeliController@destroy')->name('delete.cart');
 
 

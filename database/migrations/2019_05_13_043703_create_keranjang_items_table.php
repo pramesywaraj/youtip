@@ -18,9 +18,11 @@ class CreateKeranjangItemsTable extends Migration
             $table->unsignedBigInteger('event_id');
             $table->unsignedBigInteger('pembeli_id');
             $table->unsignedBigInteger('jastiper_id');
+            $table->integer('no_rekening')->unique();
             $table->string('name', 100);
             $table->float('price');
             $table->string('image', 100);
+            $table->string('no_hp', 20)->nullable();
             $table->integer('jumlah')->unsigned();
             $table->foreign('event_id')->references('id')->on('events');
             $table->foreign('jastiper_id')->references('id')->on('users');

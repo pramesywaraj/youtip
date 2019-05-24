@@ -66,6 +66,8 @@
 						<h3 class="product-title">{{$single->name}}</h3>
 						<p class="product-description">{{$single->deskripsi}}</p>
             <h4 class="price"><span>Rp. {{$single->price}}</span></h4>
+            <form action="{{ route('tambah.cart', $single->id ) }}" method="POST">
+    @csrf
               <div class="cart_area">
                 <div class="cart_inner">
                   <div class="product_count">
@@ -77,12 +79,11 @@
                                                 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i>-</button>
                           <button class="btn btn-primary btn-sm" onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
                                                 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i>+</button>
-
                   </div>
                 </div>
               </div>
-              <form action="{{ route('tambah.cart', $single->id ) }}" method="POST">
-    @csrf
+
+              
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

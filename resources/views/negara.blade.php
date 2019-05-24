@@ -32,7 +32,6 @@
     <header class="jumbotron bg-light">
         <div class="container text-center">
             <h1>Negara {{$oke}}!</h1>
-            <p class="lead">Let's do it!</p>
         </div>
     </header>
 

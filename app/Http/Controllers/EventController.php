@@ -16,6 +16,7 @@ use Auth;
 
 class EventController extends Controller
 {
+    //fungsi untuk menampilkan event sesuai user id di event view blade
     public function show()
     {   
         $tampil = Auth::user();
@@ -23,6 +24,8 @@ class EventController extends Controller
         return view('event', compact('datas'));
         
     }
+
+    //fungsi untuk menampilkan apa ini?!
     public function showq()
     {   
         $tampil = Auth::user();
@@ -30,6 +33,8 @@ class EventController extends Controller
         return view('oke', compact('datas'));
         
     }
+
+    //fungsi untuk menampilkan keterangan event di oke view blade
     public function showid(Request $request, $id)
     {   
         $tampil = \App\Event::where('id', $id)->first();
@@ -37,7 +42,7 @@ class EventController extends Controller
         
     }
 
-   
+    //fungsi untuk menampilkan product di produkuser view blade
     public function showproduct(Request $request, $id)
     {   
         $show = DB::table('products')->where('event_id', $id)->get();
@@ -45,6 +50,7 @@ class EventController extends Controller
         
     }
 
+    //fungsi untuk menghapus event
     public function destroy($id)
     {
         //

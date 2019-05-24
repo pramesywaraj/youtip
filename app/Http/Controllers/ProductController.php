@@ -16,6 +16,7 @@ use Auth;
 
 class ProductController extends Controller
 {
+    //fungsi untuk menambahkan product ke dalam event
     public function store(Request $request, $id){
 
         
@@ -33,7 +34,7 @@ class ProductController extends Controller
 
         $tambah->image = $fileName;
         $tambah->save();
-        return redirect()->to('/'); 
+        return redirect()->to('/profil'); 
     }
     public function update(Request $request, $id)
     {
