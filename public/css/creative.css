@@ -11,7 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
+  --blue: #f4623a;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -2608,38 +2608,38 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
+.f4623a {
   color: #fff;
   background-color: #f4623a;
   border-color: #f4623a;
 }
 
-.btn-primary:hover {
+.f4623a:hover {
   color: #fff;
   background-color: #f24516;
   border-color: #ee3e0d;
 }
 
-.btn-primary:focus, .btn-primary.focus {
+.f4623a:focus, .f4623a.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
 }
 
-.btn-primary.disabled, .btn-primary:disabled {
+.f4623a.disabled, .f4623a:disabled {
   color: #fff;
   background-color: #f4623a;
   border-color: #f4623a;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
+.f4623a:not(:disabled):not(.disabled):active, .f4623a:not(:disabled):not(.disabled).active,
+.show > .f4623a.dropdown-toggle {
   color: #fff;
   background-color: #ee3e0d;
   border-color: #e23a0d;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
+.f4623a:not(:disabled):not(.disabled):active:focus, .f4623a:not(:disabled):not(.disabled).active:focus,
+.show > .f4623a.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
 }
@@ -4967,6 +4967,10 @@ input[type="button"].btn-block {
 .card-img {
   width: 100%;
   border-radius: calc(0.25rem - 1px);
+}
+
+.img-resize {
+  height: 150px;
 }
 
 .card-img-top {

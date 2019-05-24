@@ -87,7 +87,6 @@
           </div>
         </div>
       </div>
-    @endforeach
     </div>
   </div>
   </div>
@@ -95,3 +94,4 @@
 </section>
     <!-- /.row -->
 </body>
+@endforeach
