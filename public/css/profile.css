@@ -1,5 +1,5 @@
 body{
-    background: -webkit-linear-gradient(left, #eb5c38, #eb5c38);
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff);
 }
 .emp-profile{
     padding: 3%;
@@ -35,7 +35,7 @@ body{
     color: #333;
 }
 .profile-head h6{
-    color: #0062cc;
+    color: #ee3e0d;
 }
 .profile-edit-btn{
     border: none;
@@ -65,7 +65,7 @@ body{
 }
 .profile-head .nav-tabs .nav-link.active{
     border: none;
-    border-bottom:2px solid #0062cc;
+    border-bottom:2px solid #ee3e0d;
 }
 .profile-work{
     padding: 14%;
@@ -91,5 +91,5 @@ body{
 }
 .profile-tab p{
     font-weight: 600;
-    color: #0062cc;
+    color: #ee3e0d;
 }

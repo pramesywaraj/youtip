@@ -13,6 +13,13 @@
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+              crossorigin="anonymous">
+      <link href="{{ url('css/fontawesome.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
       
 
      <!-- Plugin CSS -->
@@ -24,7 +31,7 @@
 
 <header>
     <!-- Nav Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
              <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
                 <img class="img-top" src="/image/logo/tip.png" width="50px">
@@ -34,11 +41,10 @@
                 </button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">   
-                <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav ml-left my-2 my-lg-0">
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
@@ -48,34 +54,45 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
                     </li>
-            @guest                  
-                    <li class="nav-item">
+                    </ul>
+
+                                      
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                @guest                  
+
+              <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Log in  </a>
                     </li>
                     <li class="nav-item">
             @if (Route::has('register'))
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <button type="button" class="btn btn-link btn-sm">
-                          <img class="img-top" src="/image/logo/cart.png">
-                              <span class="badge badge-light">3</span>
-                        </button> 
+                        <a class="nav-link" href="{{ url('/cart') }}">                   
+                           <i class="fas fa-shopping-cart"></i><span class="badge">0</span>
+                        </a>
                     </li>
-                </ul>
-                  
                 @endif
             @else
 
-            <li class="nav-item dropdown">           
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('profil') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/cart') }}" role="button" aria-haspopup="true" aria-expanded="false" v-pre>                   
+                           <i class="fas fa-shopping-cart"></i><span class="badge">0</span>
+
+                        </a>
+                    </li>
+            <li class="nav-item dropdown">    
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('profil') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <i class="fa fa-user"></i>  
                         <span class="caret"></span>
-                    </a>
+                </a>
                   
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a  class="dropdown-header" href="{{ route('profil') }}">
                         {{ Auth::user()->name }} 
                     </a>
+                  <div class="dropdown-divider"></div>
                     <a  class="dropdown-item" href="{{ route('logout') }}" 
                         onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
@@ -84,13 +101,12 @@
                     
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
-                    </form>
-
-                </div>
-              </div>         
-
+                    </form>                
+                  </div>
+                </div>         
             </li>
             @endguest
+            </ul>
         </div>
     </nav>  
 </header>
@@ -146,6 +162,7 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 </html>

@@ -1,4 +1,6 @@
 @extends('layouts.temp')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +18,14 @@
       <link href="{{ url('css/creative.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/style.css">
-      
+      <link rel="stylesheet" href="css/style.css">  
 
      <!-- Plugin CSS -->
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
 </head>
-      <!-- Header -->    
-    @section('content')
 
+<body>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -246,7 +246,6 @@
 </section>
     <!-- /.row -->
   
-@endsection  
    <!-- Javascript -->
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -268,3 +267,4 @@
 
 </body>
 </html>
+@endsection  
