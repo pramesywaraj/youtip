@@ -17,6 +17,8 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 100);
             $table->integer('no_rekening')->unique();
+            $table->string('nama_penjual');
+            $table->string('no_hp', 20)->nullable();
             $table->unsignedBigInteger('user_id')->unsigned();
             $table->text('deskripsi');
             $table->string('negara');

@@ -80,7 +80,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Deskripsi Event') }}</label>
 
                             <div class="col-md-6">
-                                <input id="deskripsi" type="text" class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" value="{{$tampil->deskripsi}}" required autocomplete="deskripsi" readonly>
+                                <input id="deskripsi" type="textarea" class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" value="{{$tampil->deskripsi}}" required autocomplete="deskripsi" readonly>
                             </div>
                         </div>
 

@@ -48,10 +48,10 @@
             </div>
 
             <div class="form-group row">
-                <label for="negara" class="col-sm-2 col-form-label">{{ __('Negara') }}</label>
+                <label for="negara" class="col-sm-2 col-form-label" >{{ __('Negara') }}</label>
                 <div class="col-sm-10">
-                <select class="custom-select">                            
-                    <option selected>Pilih Negara</option>
+                <select name="negara" class="custom-select">                            
+                    <option value="">Pilih Negara</option>
                             <option value="Korea">Korea</option>
                             <option value="Jepang">Jepang</option>
                             <option value="China">China</option>
@@ -73,7 +73,7 @@
             <div class="form-group row">
                 <label for="deskripsi" class="col-sm-2 col-form-label" >Deskripsi Event</label>
                 <div class="col-sm-10">
-                     <textarea class="form-control" id="Deskripisi" type="text" name="Deskripsi" value="{{ old('deskripsi') }}" placeholder="Required example textarea" required></textarea>
+                     <textarea class="form-control" id="Deskripisi" type="textarea" name="deskripsi" value="{{ old('deskripsi') }}"  required></textarea>
                 </div>
             </div>
 
