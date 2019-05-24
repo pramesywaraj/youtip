@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Event</title>
+    <title>Order List</title>
 
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
@@ -64,61 +64,69 @@
             @endguest
         </div>
     </nav> 
-<div class="table-responsive">
-<br>
-              <table id="mytable" class="table table-bordred table-striped">
-                   
-                   <thead>
-				   <th>No</th>
-                    <th>Nama Event</th>
-                     <th>Deskripsi</th>
-                     <th>Negara</th>
-                     <th>Tambah Produk</th>
-                     <th>Edit</th>
-                       <th>Delete</th>
-                   </thead>
-    <tbody>
 
-                @php(
-                    $no = 1 {{-- buat nomor urut --}}
-                    )
-                {{-- loop all data --}}
-                @foreach ($datas as $data)
-                    <tr>
-                        <td>{{ $no++ }}</td>
-                        <td>{{ $data->name }}</td>
-                        <td>{{ $data->deskripsi }}</td>
-                        <td>{{ $data->negara }}</td>
-						
-                       <td>
-                       <form action="{{route('tambah.product', $data->id) }}">
-                                @csrf
-                                <button class="btn btn-sm btn-danger" type="submit">Tambah Product</button>
-                            </form>
+    <section class="cart_area">
+      <div class="container">
+          <div class="cart_inner">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                            <th scope="col">Nama Pembeli</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      @foreach($datas as $sh)
+                          <tr>
+                          <td>
+                            <a href="{{ route('profile.id', $sh->pembeli_id) }}">{{$sh->nama_pembeli}}</a>
                         </td>
-                        <td>
-                            
-							<form action="#">
-                                @csrf
-                                <button class="btn btn-sm btn-danger" type="submit">Edit</button>
-                            </form>
-                            
-                        </td>
-						<td>
-                            
-							<form action="{{route('delete.event', $data->id)}}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <input name="_method" type="hidden" value="DELETE">
-                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
-                            </form>
-                            
-                        </td>
-                    </tr>
-                @endforeach
-                {{-- // end loop --}}
-            </tbody>
-        </form>
-        
-        
-</table>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="{{ asset('image/product/'.$sh->image)  }}" height="50" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>{{$sh->name}}</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>{{$sh->jumlah}}</h5>
+                              </td>
+                              <td>
+                                  <h5>{{$sh->price*$sh->jumlah}}</h5>
+                              </td>
+                          </tr>
+                          @endforeach
+                          
+                          
+                          <tr>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                          </tr>
+                        
+                          <tr class="out_button_area">
+                              <td class="d-none-l">
+
+                              </td>
+                              <td class="">
+
+                              </td>
+                              <td>
+
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </section>

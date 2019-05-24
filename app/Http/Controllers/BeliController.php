@@ -34,7 +34,8 @@ class BeliController extends Controller
         $tambah->pembeli_id = $akun['id'];
         $tambah->jastiper_id = $prod['user_id'];
         $tambah->no_rekening = $even->no_rekening;
-        $tambah->kontak = $akun2->no_hp;
+        $tambah->nama_pembeli = $akun['name'];
+        $tambah->no_hp = $akun2->no_hp;
         $tambah->save();
         return redirect()->to('/cart');
     }
@@ -57,4 +58,6 @@ class BeliController extends Controller
         return redirect('/cart')->with('success','Event telah di hapus');
 
     }
+
+    
 }

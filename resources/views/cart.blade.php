@@ -114,6 +114,7 @@
                               <th scope="col">Product</th>
                               <th scope="col">Price</th>
                               <th scope="col">No.Rekening</th>
+                              <th scope="col">Kontak</th>
                               <th scope="col">Total</th>
                               <th scope="col">Delete</th>
                           </tr>
@@ -136,6 +137,9 @@
                               </td>
                               <td>
                                 <h5>{{$sh->no_rekening}}</h5>
+                              </td>
+                              <td>
+                                <h5>{{$sh->no_hp}}</h5>
                               </td>
                               <td>
                                   <h5>{{$sh->price*$sh->jumlah}}</h5>

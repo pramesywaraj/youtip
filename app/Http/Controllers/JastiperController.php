@@ -10,6 +10,7 @@ use App\User;
 use App\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 
@@ -17,6 +18,7 @@ use Auth;
 class JastiperController extends Controller
 {
 
+    //fungsi untuk menambahkan event di jastiper view blade
     public function storeEvent(Request $request){
 
         $data = Auth::user();
@@ -36,4 +38,12 @@ class JastiperController extends Controller
         return redirect()->to('event'); 
     }
 
+    //fungsi untuk menampilkan orderan di jastiper(orderlist view blade)
+    public function tampilkanorder()
+    {  
+        $akun = Auth::user();
+        $datas = DB::table('keranjang_items')->where('jastiper_id', $akun['id'])->get();
+        return view('order', compact('datas'));
+        
+    }
 }

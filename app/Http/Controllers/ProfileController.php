@@ -22,6 +22,7 @@ class ProfileController extends Controller
     	return view('profile');
     }
 
+    //fugsi menampilkan informasi akun di profile view blade
     public function show()
     {   
         $users = Auth::user();
@@ -29,7 +30,15 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
+    //fungsi menampilkan profile berdasarkan id yg diinginkan di profil1 view blade
+    public function showbyid($id)
+    {   
+        $pengguna = \App\User::find($id);
+        $events = DB::table('events')->where('user_id', $pengguna['id'])->get();
+        return view('profile1', compact('pengguna', 'events'));  
+    }
 
+    //fungsi menampilkan informasi akun dan event di profile pengguna
     public function show3()
     {   
         $pengguna = Auth::user();
@@ -37,7 +46,7 @@ class ProfileController extends Controller
         return view('profile1', compact('pengguna', 'events')); 
     }
 
-
+    //fungsi edit informasi user profile
     public function update(Request $request)
     {
         $data = Auth::user();
