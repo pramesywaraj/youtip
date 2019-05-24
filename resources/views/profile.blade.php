@@ -127,17 +127,17 @@
                             </div>
                         </div>
                         
-                      <div class="form-group">
-                           <div class="col-xs-12">
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
                                 <br>
-                              	<button href="{{ route('profil') }}" class="btn btn-lg btn-success" type="submit" value="Save"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                              	<button href="{{ route('profil') }}" class="btn btn-primary" type="submit" value="Save"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
                                	
                             </div>
                       </div>
 </form>
 <br>
 
-<p>Tambahkan Product?</p>
+<p>Ingin Membuat Event?</p>
 <form action="{{ url('/jastiper') }}">
     @csrf
 <div class="form-group row mb-0">

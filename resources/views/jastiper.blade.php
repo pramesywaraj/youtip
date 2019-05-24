@@ -4,7 +4,7 @@
                     <form method="POST" action="{{ route('event.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Event') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Event Jastip') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text"  name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="deskripsi" class="col-md-4 col-form-label text-md-right">{{ __('Deskripsi') }}</label>
+                            <label for="deskripsi" class="col-md-4 col-form-label text-md-right">{{ __('Deskripsi Tentang Event') }}</label>
 
                             <div class="col-md-6">
                                 <input id="deskripsi" type="text" name="deskripsi" value="{{ old('deskripsi') }}" required autocomplete="deskripsi" autofocus>

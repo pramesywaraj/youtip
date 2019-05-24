@@ -23,6 +23,8 @@ class BeliController extends Controller
 
         $akun = Auth::user();
         $prod = \App\Product::find($id);
+        $akun2 = DB::table('users')->where('id', $prod['user_id'])->first();
+        $even = DB::table('events')->where('id', $prod['event_id'])->first();
         $tambah = new KeranjangItem();
         $tambah->name = $prod['name'];
         $tambah->jumlah = $request['qty'];
@@ -31,7 +33,8 @@ class BeliController extends Controller
         $tambah->event_id = $prod['event_id'];
         $tambah->pembeli_id = $akun['id'];
         $tambah->jastiper_id = $prod['user_id'];
-
+        $tambah->no_rekening = $even->no_rekening;
+        $tambah->kontak = $akun2->no_hp;
         $tambah->save();
         return redirect()->to('/cart');
     }

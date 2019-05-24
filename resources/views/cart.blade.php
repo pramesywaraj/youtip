@@ -93,10 +93,7 @@
 				<div class="text-center">
 					<h1>Shopping Cart</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
-            </ol>
+            
           </nav>
 				</div>
 			</div>
@@ -138,7 +135,7 @@
                                   <h5>Rp. {{$sh->price}}</h5>
                               </td>
                               <td>
-                                <h5></h5>
+                                <h5>{{$sh->no_rekening}}</h5>
                               </td>
                               <td>
                                   <h5>{{$sh->price*$sh->jumlah}}</h5>
