@@ -65,7 +65,7 @@
 					<div class="details col-md-6 my-4">
 						<h3 class="product-title">{{$single->name}}</h3>
 						<p class="product-description">{{$single->deskripsi}}</p>
-            <h4 class="price"><span>Rp{{$single->price}}</span></h4>
+            <h4 class="price"><span>Rp. {{$single->price}}</span></h4>
               <div class="cart_area">
                 <div class="cart_inner">
                   <div class="product_count">
@@ -81,9 +81,17 @@
                   </div>
                 </div>
               </div>
-              <div class="my-4">
-                 <button class="btn btn-primary ml-2" type="button" href="#">CheckOut!</button>
-              </div>
+              <form action="{{ route('tambah.cart', $single->id ) }}" method="POST">
+    @csrf
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Checkout!') }}
+                                </button>
+                            </div>
+                        </div>
+              </form>
+
 					</div>
         </div>
 			</div>
