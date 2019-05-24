@@ -15,15 +15,14 @@ use Auth;
 
 class HomePageController extends Controller
 {
+    //fungsi untuk menampilkan seller di homepage
     public function show()
     {   
-        $data = DB::table('events');
-        $tampils = DB::table('users')->where('id',$data['user_id'])->first();
-        dd($tampils);
-        return view('coba', compact('tampils'));
+        $tampils = DB::table('events')->select('nama_penjual')->distinct()->get();
+        return view('home', compact('tampils'));
     }
     
-    
+    //fungsi untuk menampilkan event per negara di homepage
     public function showevent(Request $request, $id)
     {   
         $oke = $id;

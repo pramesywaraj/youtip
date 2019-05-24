@@ -28,6 +28,7 @@ class JastiperController extends Controller
         $tambah->negara = $request['negara'];
         $tambah->deskripsi = $request['deskripsi'];
         $tambah->nama_penjual = $data['name'];
+        $tambah->image_penjual = $data['image'];
         $tambah->no_hp = $data['no_hp'];
         $tambah->no_rekening = $request['no_rekening'];
         

@@ -75,7 +75,7 @@ Route::post('/jastiper', 'JastiperController@storeEvent')->name('event.store');
 Route::get('/orderlist', 'JastiperController@tampilkanorder')->name('tampil.order');
 
 //Routing Homepage
-Route::get('/coba', 'HomePageController@show')->name('show.user');
+Route::get('/', 'HomePageController@show')->name('show.user');
 Route::get('/negara/{id}', 'HomePageController@showevent')->name('event.country');
 
 //Routing tentang Event
