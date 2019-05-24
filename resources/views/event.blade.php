@@ -106,7 +106,7 @@
                         </td>
 						<td>
                             
-							<form action="#" method="post">
+							<form action="{{route('delete.event', $data->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input name="_method" type="hidden" value="DELETE">

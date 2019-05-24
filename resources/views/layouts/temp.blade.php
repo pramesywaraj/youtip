@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 
+         <!-- CSRF Token -->
+          <meta name="csrf-token" content="{{ csrf_token() }}">
+
      <!-- Google Fonts -->
-       <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-       <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
-
+     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+     
      <!-- Custom styles for this template -->
-      <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
+      <link href="{{ url('css/creative.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
@@ -20,10 +21,14 @@
 </head>
 
 <body id="page-top">
+
+<header>
     <!-- Nav Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}"><img class="img-top" src="/image/logo/you.png" width="100px"></a>
+             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
+                <img class="img-top" src="/image/logo/tip.png" width="50px">
+            </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,24 +67,33 @@
                 @endif
             @else
 
-            </div>                    
-                        <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <br><span class="caret"></span>
-                        </a>
-                            <br>
-
-                        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+            <li class="nav-item dropdown">           
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('profil') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <span class="caret"></span>
+                    </a>
+                  
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a  class="dropdown-header" href="{{ route('profil') }}">
+                        {{ Auth::user()->name }} 
+                    </a>
+                    <a  class="dropdown-item" href="{{ route('logout') }}" 
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
-                        </a>
-
+                    </a>
+                    
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
+                      @csrf
                     </form>
+
+                </div>
+              </div>         
+
+            </li>
             @endguest
         </div>
     </nav>  
-
+</header>
         <main>
             @yield('content')
         </main>
@@ -121,6 +135,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>

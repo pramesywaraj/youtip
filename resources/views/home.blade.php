@@ -10,12 +10,10 @@
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
      <!-- Google Fonts -->
-       <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-       <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
+     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
      <!-- Custom styles for this template -->
-      <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
+      <link href="{{ url('css/creative.css') }}" rel="stylesheet">
       <link href="{{ url('css/modern-business.css') }}" rel="stylesheet">
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
@@ -26,7 +24,6 @@
 
 </head>
       <!-- Header -->    
-    <header>
     @section('content')
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -109,7 +106,6 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-    </header>
 
     <!-- About Section -->
 

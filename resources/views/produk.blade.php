@@ -1,3 +1,4 @@
+@extends('layouts.temp')
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,96 +35,35 @@
 
 	<body id="page-top">
 
-    <!-- Nav Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container">
-             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}"><img class="img-top" src="/image/logo/you.png" width="100px"></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    @section('content')
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">   
-                <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
-                    </li>
+	<!-- ================ start banner area ================= -->	
+	<section class="jumbotron my-auto" id="blog">
+		<div class="container">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Product</h1>
+				</div>
+			</div>
+    </div>
+	</section>
+	<!-- ================ end banner area ================= -->
 
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
-                    </li>
-            @guest                  
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Log in  </a>
-                    </li>
-                    <li class="nav-item">
-            @if (Route::has('register'))
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-link btn-sm">
-                          <img class="img-top" src="/image/logo/cart.png">
-                              <span class="badge badge-light">3</span>
-                        </button> 
-                    </li>
-                </ul>
-                  
-                @endif
-            @else
-
-            </div>                    
-                        <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <br><span class="caret"></span>
-                        </a>
-                            <br>
-
-                        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                        </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-                    </form>
-            @endguest
-        </div>
-    </nav>  
-
-	<div class="container my-5">
+    <div class="container my-5">
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active text-center my-4" id="pic-1"><img src="{{ asset('image/product/'.$single->image)  }}" /></div>
+						    <div class="single-prd-item" id="pic-1">
+                              <img class="img-fluid" src="{{ asset('image/product/'.$single->image)  }}">
+                            </div>
 						</div>
 						
 					</div>
 					<div class="details col-md-6 my-4">
 						<h3 class="product-title">{{$single->name}}</h3>
-<<<<<<< HEAD
-						  <p class="product-description">{{$single->deskripsi}}</p>
-						<h4 class="price">Harga: <span>Rp. {{$single->price}}</span></h4>
-            <form action="{{ route('tambah.cart', $single->id)}}" method="POST">
-           @csrf
-<div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Ya!') }}
-                                </button>
-                            </div>
-                        </div>
-</form>
-						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">BELI SEKARANG!</button>
-						</div>
-=======
 						<p class="product-description">{{$single->deskripsi}}</p>
             <h4 class="price"><span>Rp{{$single->price}}</span></h4>
               <div class="cart_area">
@@ -144,13 +84,14 @@
               <div class="my-4">
                  <button class="btn btn-primary ml-2" type="button" href="#">CheckOut!</button>
               </div>
->>>>>>> 6020a3094e2fee6bdb77187036c57c630a3c2c21
 					</div>
         </div>
 			</div>
 		</div>
   </div>
   
+@endsection
+
   <!-- Javascript -->
 
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->

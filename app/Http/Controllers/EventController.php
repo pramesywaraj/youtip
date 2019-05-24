@@ -45,4 +45,13 @@ class EventController extends Controller
         
     }
 
+    public function destroy($id)
+    {
+        //
+        $hapus = \App\Event::find($id);
+        $hapus->delete();
+        return redirect('/event')->with('success','Event telah di hapus');
+
+    }
+
 }

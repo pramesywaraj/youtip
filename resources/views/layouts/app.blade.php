@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img class="img-top" src="/image/logo/tip.png" width="50px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,20 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">   
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#page-top">Home </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#seller">Seller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#contact">Contact <br></a>
+                            </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -66,6 +80,7 @@
                                     </form>
                                 </div>
                             </li>
+                        </div>
                         @endguest
                     </ul>
                 </div>

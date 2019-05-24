@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Linearicons-Free';
+	font-family: 'Nunito', sans-serif;
 	src:url('fonts/Linearicons-Free.eot?w118d');
 	src:url('fonts/Linearicons-Free.eot?#iefixw118d') format('embedded-opentype'),
 		url('fonts/Linearicons-Free.woff2?w118d') format('woff2'),
@@ -11,7 +11,7 @@
 }
 
 .lnr {
-	font-family: 'Linearicons-Free';
+	font-family: 'Nunito', sans-serif;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
