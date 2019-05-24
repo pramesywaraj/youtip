@@ -16,13 +16,16 @@ use Auth;
 
 class BeliController extends Controller
 {
+
+    //fungsi untuk menambahkan produk ke dalam cart
     public function tambahproduk(Request $request, $id)
     {
+
         $akun = Auth::user();
         $prod = \App\Product::find($id);
         $tambah = new KeranjangItem();
         $tambah->name = $prod['name'];
-        $tambah->jumlah = '2';
+        $tambah->jumlah = $request['qty'];
         $tambah->price = $prod['price'];
         $tambah->image = $prod['image'];
         $tambah->event_id = $prod['event_id'];
@@ -33,6 +36,7 @@ class BeliController extends Controller
         return redirect()->to('/cart');
     }
 
+    //fungsi untuk menampilkan isi cart ke view blade
     public function showcart()
     {   
         $akun = Auth::user();
@@ -41,4 +45,13 @@ class BeliController extends Controller
         
     }
     
+    //fungsi untuk menghapus item di cart
+    public function destroy($id)
+    {
+        //
+        $hapus = \App\KeranjangItem::find($id);
+        $hapus->delete();
+        return redirect('/cart')->with('success','Event telah di hapus');
+
+    }
 }

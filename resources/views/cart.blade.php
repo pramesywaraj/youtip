@@ -118,7 +118,7 @@
                               <th scope="col">Price</th>
                               <th scope="col">No.Rekening</th>
                               <th scope="col">Total</th>
-                              <th scope="col">Upload</th>
+                              <th scope="col">Delete</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -138,33 +138,23 @@
                                   <h5>Rp. {{$sh->price}}</h5>
                               </td>
                               <td>
-                                <h5>Rp.</h5>
+                                <h5></h5>
                               </td>
                               <td>
                                   <h5>{{$sh->price*$sh->jumlah}}</h5>
                               </td>
                               <td>
-                              <div class="checkout_btn_inner d-flex align-items-center">
-                                <a class="button" href="#">Upload</a>
-                              </div>
+                              <form action="{{route('delete.cart', $sh->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                            </form>
                               </td>
                           </tr>
                           @endforeach
                           
-                          <tr class="bottom_button">
-                              <td>
-                                  <a class="button" href="#">Update Cart</a>
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-                         
-                              </td>
-                          </tr>
+                          
                           <tr>
                               <td>
 
@@ -186,7 +176,7 @@
                               </td>
                               <td>
                                   <div class="checkout_btn_inner d-flex align-items-center">
-                                      <a class="gray_btn" href="#">Continue Shopping</a>
+                                      <a class="gray_btn" href="{{url('/')}}">Continue Shopping</a>
                                       
                                   </div>
                               </td>
