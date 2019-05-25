@@ -1,4 +1,4 @@
-@extends('layouts.temp')
+@extends('layouts.temp2')
 @section('content')
 
 <!DOCTYPE html>
@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="{{ url('css/youtip.style.css') }}">   
 
     <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
      <!-- Custom styles for this template -->
       <link href="{{ url('css/creative.min.css') }}" rel="stylesheet">
@@ -21,6 +19,7 @@
       <link rel="stylesheet" href="css/profile.css"/>
       <link rel="stylesheet" href="css/grid.css"/>
       <link rel="stylesheet" href="css/style.css">
+      <link href="{{ url('css/fontawesome.min.css') }}" rel="stylesheet">
 
 
      <!-- Plugin CSS -->

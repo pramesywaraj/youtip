@@ -45,7 +45,7 @@
     @foreach($show as $sh)
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="{{ asset('image/event/'.$sh->image) }}" alt=""></a>
+          <a href="#"><img class="img-responsive img-resize" src="{{ asset('image/event/'.$sh->image) }}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{$sh->name}}</a>

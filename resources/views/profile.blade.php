@@ -1,4 +1,4 @@
-@extends('layouts.temp')
+@extends('layouts.temp2')
 @section('content')
 
 <!DOCTYPE html>
@@ -10,8 +10,7 @@
     <title>Profile</title>
 
       <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-       <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
 
      <!-- Custom styles for this template -->
@@ -26,6 +25,13 @@
 </head>
 
 <body>
+
+<div class="container pad">
+    <div class="jumbotron text-center">
+      <h1>Edit Profile!</h1>
+    </div>
+</div>
+    
     <div class="container col-5">
         <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
 					@csrf
@@ -90,18 +96,7 @@
         </form>
     </div>
 
-<div class="container text-center">
-    <div class="card-body">
-<form action="{{ url('/jastiper') }}">
-    @csrf
-<div class="form-group row mb-0">
-            <div class="card-title">Tambahkan Product?</div>
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Ya!') }}
-                                </button>
-                              </div>
-</form>
-</div>
+
 </div>
 </body>
 </html>
