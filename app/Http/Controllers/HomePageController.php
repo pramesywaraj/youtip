@@ -18,7 +18,7 @@ class HomePageController extends Controller
     //fungsi untuk menampilkan seller di homepage
     public function show()
     {   
-        $tampils = DB::table('events')->select('nama_penjual')->distinct()->get();
+        $tampils = DB::table('events')->select('nama_penjual', 'image_penjual', 'user_id')->distinct()->get();
         return view('home', compact('tampils'));
     }
     

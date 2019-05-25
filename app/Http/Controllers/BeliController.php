@@ -18,7 +18,7 @@ class BeliController extends Controller
 {
 
     //fungsi untuk menambahkan produk ke dalam cart
-    public function tambahproduk(Request $request, $id)
+    public function belanja(Request $request, $id)
     {
 
         $akun = Auth::user();

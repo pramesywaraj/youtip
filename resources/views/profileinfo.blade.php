@@ -99,7 +99,29 @@
                                     </div>
                                 </div>
                             </div>
+
+                            
+                <div class="tab-pane fade py-4" id="event" role="tabpanel" aria-labelledby="event-tab">
+                            <div class="row">
+                            @foreach ($events as $event)
+                              <div class="col-lg-4 col-sm-6 portfolio-item">
+                                <div class="card h-100">
+                                  <a href="#"><img class="img-responsive img-resize" src="{{ asset('image/event/'.$event->image) }}" alt=""></a>
+                                  <div class="card-body">
+                                    <h3 class="card-title">
+                                      <a href="{{ route('event.product', $event->id)}}">{{$event->name}}</a>
+                                    </h3>
+                                        <p class="card-text">{{$event->deskripsi}} <br>{{$event->negara}}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            @endforeach
+                            </div>
+                 </div>
+         </div>
         </div>
+
+ </div>
 
 
         <!-- Javascript -->

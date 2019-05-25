@@ -66,7 +66,7 @@
 						<h3 class="product-title">{{$single->name}}</h3>
 						<p class="product-description">{{$single->deskripsi}}</p>
             <h4 class="price"><span>Rp. {{$single->price}}</span></h4>
-            <form action="{{ route('tambah.cart', $single->id ) }}" method="POST">
+            <form action="{{ route('tambah.itemscart', $single->id ) }}" method="POST">
     @csrf
               <div class="cart_area">
                 <div class="cart_inner">

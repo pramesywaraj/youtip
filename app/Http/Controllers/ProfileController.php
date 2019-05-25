@@ -30,11 +30,19 @@ class ProfileController extends Controller
         return view('profile', compact('users'));    
     }
 
+    //fungsi menampilkan profile berdasarkan id yg diinginkan di profilinfo view blade
+    public function showprofil($id)
+    {   
+        $pengguna = \App\User::find($id);
+        return view('profileinfo', compact('pengguna'));  
+    }
+
     //fungsi menampilkan profile berdasarkan id yg diinginkan di profil1 view blade
     public function showbyid($id)
     {   
         $pengguna = \App\User::find($id);
-        return view('profileinfo', compact('pengguna'));  
+        $events = DB::table('events')->where('user_id', $id)->get();
+        return view('profileinfo', compact('pengguna', 'events'));  
     }
 
     //fungsi menampilkan informasi akun dan event di profile pengguna

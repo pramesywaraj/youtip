@@ -137,7 +137,7 @@
     @foreach($tampils as $t)
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src=# alt=""></a>
+          <a href="{{ route('profileby.id', $t->user_id) }}"><img class="card-img-top" src="{{ asset('image/profile/'.$t->image_penjual) }}" style="max-height:200px;max-width:200px;margin-top:10px; alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{$t->nama_penjual}}</a>

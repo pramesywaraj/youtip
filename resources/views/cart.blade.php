@@ -94,7 +94,7 @@
                                   <h5>{{$sh->price*$sh->jumlah}}</h5>
                               </td>
                               <td>
-                              <form action="{{route('delete.cart', $sh->id)}}" method="post">
+                              <form action="{{route('delete.itemscart', $sh->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input name="_method" type="hidden" value="DELETE">

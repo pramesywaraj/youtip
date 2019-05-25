@@ -60,8 +60,8 @@ Route::PATCH('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/product2/{id}','EventController@showproduct')->name('event.product');
 Route::get('/product/{id}','ProductController@singleproduct')->name('single.product');
 //Route::get('/profil/{id}/show','ProfileController@show2')->name('profil.produk');
-Route::get('/profileinfo/{id}','ProfileController@showbyid')->name('profile.id');
-
+Route::get('/profileinfo/{id}','ProfileController@showprofile')->name('profile.id');
+Route::get('/profileinfo/{id}','ProfileController@showbyid')->name('profileby.id');
 
 //Routing semuamua tentang produk
 Route::post('/oke/{id}/store', 'ProductController@store')->name('store.product');
@@ -84,8 +84,8 @@ Route::get('/oke/{id}/tambah', 'EventController@showid')->name('tambah.product')
 Route::delete('/event/{id}/destroy', 'EventController@destroy')->name('delete.event');
 
 //Routing nitipers untuk membeli produk
-Route::post('/cart/{id}', 'BeliController@tambahproduk')->name('tambah.cart');
+Route::post('/cart/{id}', 'BeliController@belanja')->name('tambah.itemscart');
 Route::get('/cart', 'BeliController@showcart')->name('tampil.cart');
-Route::delete('/cart/{id}/delete', 'BeliController@destroy')->name('delete.cart');
+Route::delete('/cart/{id}/delete', 'BeliController@destroy')->name('delete.itemscart');
 
 
