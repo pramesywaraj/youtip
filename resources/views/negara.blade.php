@@ -1,4 +1,5 @@
-@extends('layouts.temp')
+@extends('layouts.temp2')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

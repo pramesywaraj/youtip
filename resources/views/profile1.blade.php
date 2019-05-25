@@ -46,7 +46,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="profile-img">
-                                    <img src="{{ asset('image/profile/'.$pengguna->image)  }}" alt=""/>
+                                    <img class="img-responsive img-resize img-thumbnail" src="{{ asset('image/profile/'.$pengguna->image)  }}" alt=""/>
 
                                 </div>
                             </div>
@@ -98,14 +98,26 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-2">
-                                <a href="{{ route('profile') }}" class="btn btn-primary">Edit Profile</a>
-                                <a href="{{ route('show.event') }}" class="btn btn-primary my-2">Edit Event</a>
-                                <a href="{{ url('/jastiper') }}" class="btn btn-primary">Tambah Produk</a>
-                            </div>
                         </div>
                     </form>   
+                    <div class="btn group">
+                    <button type="button" class="btn btn-primary btn-lg btn-block"> 
+                        <a href="{{ route('profile') }}" class="btn btn-primary">Edit Profile</a>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                        <a href="{{ route('show.event') }}" class="btn btn-primary">Edit Event</a>
+                    </button>
+                    </div>
+
+                    <div class="btn group">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                        <a href="{{ url('/jastiper') }}" class="btn btn-primary">Tambah Event</a>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                        <a href="{{ url('/jastiper') }}" class="btn btn-primary">List Pesanan</a>
+                    </button>
+                    </div>
+               
                 </div>        
 
 
@@ -138,4 +150,4 @@
 
 </body>
 </html>
-@endsection  
+@endsection

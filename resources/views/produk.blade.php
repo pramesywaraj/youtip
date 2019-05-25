@@ -1,4 +1,4 @@
-@extends('layouts.temp')
+@extends('layouts.temp2')
 @section('content')
 
 <!DOCTYPE html>
@@ -38,15 +38,11 @@
 	<body>
 
 	<!-- ================ start banner area ================= -->	
-	<section class="jumbotron my-auto" id="blog">
-		<div class="container">
-			<div class="blog-banner">
-				<div class="text-center">
-					<h1>Product</h1>
-				</div>
-			</div>
+	<div class="container">
+    <div class="jumbotron text-center">
+      <h1>checkout!</h1>
     </div>
-	</section>
+  </div>
 	<!-- ================ end banner area ================= -->
 
     <div class="container my-5">
@@ -55,7 +51,7 @@
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 						
-						<div class="preview-pic tab-content">
+						<div class="preview-pic tab-content text-center py-4">
 						    <div class="single-prd-item" id="pic-1">
                               <img class="img-fluid" src="{{ asset('image/product/'.$single->image)  }}">
                             </div>

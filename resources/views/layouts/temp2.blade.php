@@ -70,7 +70,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/cart') }}">                   
-                           <i class="fas fa-shopping-cart"></i><span class="badge">0</span>
+                           <i class="fas fa-shopping-cart"></i><span>Checkout</span>
                         </a>
                     </li>
                 @endif
@@ -78,12 +78,12 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/cart') }}" role="button" aria-haspopup="true" aria-expanded="false" v-pre>                   
-                           <i class="fas fa-shopping-cart"></i><span class="badge">0</span>
+                           <i class="fas fa-shopping-cart"></i><span>Checkout</span>
 
                         </a>
                     </li>
             <li class="nav-item dropdown">    
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('profil') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     <i class="fa fa-user"></i>  
                         <span class="caret"></span>
                 </a>

@@ -1,3 +1,6 @@
+@extends('layouts.temp2')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,54 +25,17 @@
       <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
 </head>
-	<body id="page-top">
-    <!-- Nav Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container">
-             <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Youtip</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">   
-                <ul class="navbar-nav ml-auto  ml-auto my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{{ url('/') }}">Home <br></a>
-                    </li>
-
-    
-            @guest                  
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Log in  </a>
-                    </li>
-                    <li class="nav-item">
-            @if (Route::has('register'))
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-            @endif
-            @else
-                    </li>
-                </ul>
-            </div>                    
-                        <a id="navbarDropdown"  href="{{ route('profil') }}" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-                            <br>
-
-                        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                        </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-                    </form>
-            @endguest
-        </div>
-    </nav> 
   <body>
+
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Titip Kuy!</h1>
+    </div>
+  </div>
+
   <section id="seller">
   <div class="container text-center">
-  <h2>Product</h2>
   <div class="accordion" id="accordionExample">    
     <div class="row">
     @foreach($show as $sh)
@@ -95,3 +61,6 @@
     <!-- /.row -->
 </body>
 @endforeach
+
+</html>
+@endsection
