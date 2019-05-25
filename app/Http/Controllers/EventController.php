@@ -38,7 +38,8 @@ class EventController extends Controller
     public function showid(Request $request, $id)
     {   
         $tampil = \App\Event::where('id', $id)->first();
-        return view('oke', compact('tampil'));
+        $datas = \App\Product::where('event_id', $id)->get();
+        return view('oke', compact('tampil', 'datas'));
         
     }
 
