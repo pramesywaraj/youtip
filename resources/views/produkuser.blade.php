@@ -34,14 +34,12 @@
     </div>
   </div>
 
-  <section id="seller">
   <div class="container text-center">
-  <div class="accordion" id="accordionExample">    
     <div class="row">
     @foreach($show as $sh)
       <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="{{ asset('image/product/'.$sh->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;" alt=""></a>
+        <div class="card">
+          <a href="#"><img class="img-responsive img-resize" src="{{ asset('image/product/'.$sh->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a>{{$sh->name}}</a>
@@ -53,14 +51,12 @@
           </div>
         </div>
       </div>
+      @endforeach
+
     </div>
   </div>
-  </div>
-  </div>
-</section>
     <!-- /.row -->
 </body>
-@endforeach
 
 </html>
 @endsection
