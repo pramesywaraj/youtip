@@ -51,6 +51,14 @@ class EventController extends Controller
         
     }
 
+    //fungsi untuk menampilkan event di eventedit view blade
+    public function showedit(Request $request, $id)
+    {   
+        $show = DB::table('events')->where('id', $id)->first();
+        return view('editevent', compact('show'));
+        
+    }
+
     //fungsi untuk menghapus event
     public function destroy($id)
     {
@@ -61,4 +69,26 @@ class EventController extends Controller
 
     }
 
+    //fungsi edit event 
+    public function edit(Request $request, $id)
+    {
+        $data = \App\Event::where('id', $id)->first();
+        $data->name = $request->get('name');
+        $data->deskripsi = $request->get('deskripsi');
+
+        if($request->file('image') == "")
+        {
+            $data->image = $data->image;
+        } 
+        else
+        {
+            $file       = $request->file('image');
+            $fileName   = $file->getClientOriginalName();
+            $request->file('image')->move("image/event/", $fileName);
+            $data->image = $fileName;
+        }
+
+        $data->update();
+        return redirect('/event')->with('alert-success','Data berhasil diubah!');
+    }
 }

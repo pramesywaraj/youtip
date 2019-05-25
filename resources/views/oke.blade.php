@@ -165,7 +165,7 @@
 						
                         <td>
                             
-							<form action="#">
+							<form action="{{ route('show.update', $data->id)}}" method = "GET">
                                 @csrf
                                 <button class="btn btn-sm btn-danger" type="submit">Edit</button>
                             </form>
@@ -173,7 +173,7 @@
                         </td>
 						<td>
                             
-							<form action="#" method="post">
+							<form action="{{route('delete.product', $data->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input name="_method" type="hidden" value="DELETE">

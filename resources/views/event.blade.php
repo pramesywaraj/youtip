@@ -60,7 +60,7 @@
                         </td>
                         <td>
                             
-							<form action="#">
+							<form action="{{route('show.editevent', $data->id)}}" method="GET">
                                 @csrf
                                 <button class="btn btn-sm btn-danger" type="submit">Edit</button>
                             </form>

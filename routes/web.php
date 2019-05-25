@@ -65,8 +65,8 @@ Route::get('/profileinfo/{id}','ProfileController@showbyid')->name('profileby.id
 
 //Routing semuamua tentang produk
 Route::post('/oke/{id}/store', 'ProductController@store')->name('store.product');
-Route::get('/oke/{id}/update', 'ProductController@showid')->name('show.update');
-Route::PATCH('/oke2/{id}/update', 'ProductController@update')->name('update.product');
+Route::get('/editproduk/{id}', 'ProductController@showid')->name('show.update');
+Route::PATCH('/editproduk/{id}', 'ProductController@update')->name('update.product');
 Route::delete('/oke/{id}/destroy', 'ProductController@destroy')->name('delete.product');
 Route::get('/oke', 'ProductController@show')->name('show.product');
 
@@ -81,6 +81,8 @@ Route::get('/negara/{id}', 'HomePageController@showevent')->name('event.country'
 //Routing tentang Event
 Route::get('/event', 'EventController@show')->name('show.event');
 Route::get('/oke/{id}/tambah', 'EventController@showid')->name('tambah.product');
+Route::get('/editevent/{id}', 'EventController@showedit')->name('show.editevent');
+Route::PATCH('/editevent/{id}', 'EventController@edit')->name('edit.event');
 Route::delete('/event/{id}/destroy', 'EventController@destroy')->name('delete.event');
 
 //Routing nitipers untuk membeli produk
