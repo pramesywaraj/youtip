@@ -31,7 +31,7 @@ class ProfileController extends Controller
     }
 
     //fungsi menampilkan profile berdasarkan id yg diinginkan di profilinfo view blade
-    public function showprofil($id)
+    public function showprofile($id)
     {   
         $pengguna = \App\User::find($id);
         return view('profileinfo', compact('pengguna'));  

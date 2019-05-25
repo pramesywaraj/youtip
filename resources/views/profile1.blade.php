@@ -114,7 +114,7 @@
                         <a href="{{ url('/jastiper') }}" class="btn btn-primary">Tambah Event</a>
                     </button>
                     <button type="button" class="btn btn-primary btn-lg btn-block">
-                        <a href="{{ url('/jastiper') }}" class="btn btn-primary">List Pesanan</a>
+                        <a href="{{ url('/orderlist') }}" class="btn btn-primary">List Pesanan</a>
                     </button>
                     </div>
                

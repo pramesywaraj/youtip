@@ -82,7 +82,7 @@
                       @foreach($datas as $sh)
                           <tr>
                           <td>
-                            <a href="{{ route('profile.id', $sh->pembeli_id) }}">{{$sh->nama_pembeli}}</a>
+                            <a href="{{ route('profileby.id', $sh->pembeli_id) }}">{{$sh->nama_pembeli}}</a>
                         </td>
                               <td>
                                   <div class="media">
@@ -95,7 +95,7 @@
                                   </div>
                               </td>
                               <td>
-                                  <h5>{{$sh->jumlah}}</h5>
+                                  <h5>Rp. {{$sh->jumlah}}</h5>
                               </td>
                               <td>
                                   <h5>{{$sh->price*$sh->jumlah}}</h5>
