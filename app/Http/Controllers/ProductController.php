@@ -56,15 +56,15 @@ class ProductController extends Controller
         }
         
         $data->update();
-        return redirect()->to('/oke')->with('success', 'Data buku telah diubah');       
+        return redirect()->to('/event')->with('success', 'Data buku telah diubah');       
    
 
     }
 
-    public function showid(Request $id)
+    public function showid(Request $request, $id)
     {   
-        $tampils = DB::table('products')->where('event_id', $id)->get();
-        return view('oke', compact('tampils'));
+        $show = DB::table('products')->where('id', $id)->first();
+        return view('editproduk', compact('show'));
         
     }
 
@@ -81,9 +81,10 @@ class ProductController extends Controller
         //
         $hapus = \App\Product::find($id);
         $hapus->delete();
-        return redirect('/oke')->with('success','Data buku telah di hapus');
+        return redirect('/profile1')->with('success','Data buku telah di hapus');
 
     }
+
     public function singleproduct($id)
     {
         //
@@ -91,4 +92,6 @@ class ProductController extends Controller
         return view('produk', compact('single'));
 
     }
+
+
 }

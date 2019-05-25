@@ -105,6 +105,57 @@
             </div>
       
 </div>
+<div class="table-responsive">
+<br>
+              <table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+				   <th>No</th>
+                    <th>Nama Product</th>
+                     <th>Deskripsi</th>
+                     <th>Harga</th>
+                     <th>Edit</th>
+                       <th>Delete</th>
+                   </thead>
+    <tbody>
+
+                @php(
+                    $no = 1 {{-- buat nomor urut --}}
+                    )
+                {{-- loop all data --}}
+                @foreach ($datas as $data)
+                    <tr>
+                        <td>{{ $no++ }}</td>
+                        <td>{{ $data->name }}</td>
+                        <td>{{ $data->deskripsi }}</td>
+                        <td>{{ $data->price }}</td>
+						
+                        <td>
+                            
+							<form action="{{ route('show.update', $data->id)}}" method = "GET">
+                                @csrf
+                                <button class="btn btn-sm btn-danger" type="submit">Edit</button>
+                            </form>
+                            
+                        </td>
+						<td>
+                            
+							<form action="{{route('delete.product', $data->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                            </form>
+                            
+                        </td>
+                    </tr>
+                @endforeach
+                {{-- // end loop --}}
+            </tbody>
+        </form>
+        
+        
+</table>
 
 </div>
 </body>
