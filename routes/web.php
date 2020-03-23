@@ -45,9 +45,9 @@ Route::get('/negara', function () {
     return view('negara');
 });
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+//Route::get('/cart', function () {
+  //  return view('cart');
+//});
 
 Route::get('/main', function () {
     return view('main');
